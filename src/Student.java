@@ -19,14 +19,6 @@ public class Student {
 		setStudentID(studentID);
 		setDOB(DOB);
 		setRegStatus(regStatus);
-
-		//I removed these and added setter and getter functions so if we need to input any exceptions we can do so there 
-		//rather than in the constructor
-//		this.fName = fName;
-//		this.lName = lName;
-//		this.studentID = studentID;
-//		this.DOB = DOB;
-//		this.registrationStatus = registrationStatus;
 	}
 
 	public void setFName(String newfName){

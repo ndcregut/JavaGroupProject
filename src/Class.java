@@ -22,7 +22,7 @@ public class Class {
 		setCreditHours(creditHours);
 	}
 
-	public void setClassID(newClassID){
+	public void setClassID(int newClassID){
 		classID = newClassID;
 	}
 	

@@ -15,7 +15,7 @@ public class Grade {
 		setClassName(className);
 	}
 
-	public void setGrade(newGrade){
+	public void setGrade(char newGrade){
 		grade = newGrade;
 	}
 
@@ -23,7 +23,7 @@ public class Grade {
 		return this.grade;
 	}
 
-	public void setClassID(newClassID){
+	public void setClassID(int newClassID){
 		classID = newClassID;
 	}
 
@@ -31,7 +31,7 @@ public class Grade {
 		return this.classID;
 	}
 
-	public void setClassName(newClassName){
+	public void setClassName(String newClassName){
 		className = newClassName;
 	}
 

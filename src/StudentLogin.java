@@ -12,7 +12,7 @@ public class StudentLogin {
 		setDOB(DOB);
 	}
 
-	public void setStudentID(newStudentID){
+	public void setStudentID(int newStudentID){
 		studentID = newStudentID;
 	}
 	
@@ -20,7 +20,7 @@ public class StudentLogin {
 		return this.studentID;
 	}
 
-	public void setDOB(newDOB){
+	public void setDOB(String newDOB){
 		DOB = newDOB;
 	}
 

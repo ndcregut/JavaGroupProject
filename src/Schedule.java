@@ -22,7 +22,7 @@ public class Schedule {
 		setTimes(times);
 	}
 
-	public void setStudentID(newStudentID){
+	public void setStudentID(int newStudentID){
 		studentID = newStudentID;
 	}
 
@@ -30,7 +30,7 @@ public class Schedule {
 		return this.studentID;
 	}
 
-	public void setSemester(newSemester){
+	public void setSemester(String newSemester){
 		semester = newSemester;
 	}
 
@@ -38,7 +38,7 @@ public class Schedule {
 		return this.semester;
 	}
 
-	public void setYear(newYear){
+	public void setYear(int newYear){
 		year = newYear;
 	}
 
@@ -46,14 +46,14 @@ public class Schedule {
 		return this.year;
 	}
 
-	public void setClassID(newClassID){
+	public void setClassID(int newClassID){
 		classID = newClassID;
 	}
 
 	public int getClassID(){
 		return this.classID;
 	}	
-	public void setClassName(newClassName){
+	public void setClassName(String newClassName){
 		className = newClassName;
 	}
 
@@ -61,7 +61,7 @@ public class Schedule {
 		return this.className;
 	}
 
-	public void setTimes(newTimes){
+	public void setTimes(String newTimes){
 		times = newTimes;
 	}
 
