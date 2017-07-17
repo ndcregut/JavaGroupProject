@@ -30,15 +30,15 @@ public class Class {
 		return this.classID;
 	}	
 	
-	public void setClassName(newClassName){
+	public void setClassName(String newClassName){
 		className = newClassName;
 	}
 	
 	public String getClassName(){
-		return this.ClassName;
+		return this.className;
 	}
 
-	public void setDays(newDays){
+	public void setDays(String newDays){
 		days = newDays;
 	}
 
@@ -46,7 +46,7 @@ public class Class {
 		return this.days;
 	}
 
-	public void setTimes(newTimes){
+	public void setTimes(String newTimes){
 		times = newTimes;
 	}
 
@@ -54,7 +54,7 @@ public class Class {
 		return this.times;
 	}
 
-	public void setBuilding(newBuilding){
+	public void setBuilding(String newBuilding){
 		building = newBuilding;
 	}
 
@@ -62,7 +62,7 @@ public class Class {
 		return this.building;
 	}
 	
-	public void setRoom(newRoom){	
+	public void setRoom(String newRoom){	
 		room = newRoom;
 	}
 
@@ -70,7 +70,7 @@ public class Class {
 		return this.room;
 	}
 
-	public void setCreditHours(newCreditHours){
+	public void setCreditHours(int newCreditHours){
 		creditHours = newCreditHours;
 	}
 
