@@ -22,11 +22,11 @@ public class StudentTranscript {
 		setGrade(grade);
 	}
 
-	public void setStudentID(String newStudentID){
+	public void setStudentID(int newStudentID){
 		studentID = newStudentID;
 	}
 	
-	public String getStudentID(){
+	public int getStudentID(){
 		return this.studentID;
 	}
 

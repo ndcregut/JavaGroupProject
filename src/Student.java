@@ -37,8 +37,8 @@ public class Student {
 		return this.lName;
 	}
 
-	public void setStudentID(int newstudentID){
-		studentID = newstudenID;
+	public void setStudentID(int newStudentID){
+		studentID = newStudentID;
 	}
 
 	public int getStudentID(){

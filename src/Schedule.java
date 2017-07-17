@@ -1,7 +1,7 @@
 
 public class Schedule {
 	private int studentID;
-	Private String semester;
+	private String semester;
 	private int year;
 	private int classID;
 	private String className;
