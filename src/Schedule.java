@@ -6,6 +6,8 @@ public class Schedule {
 	private int classID;
 	private String className;
 	private String times;
+	private String building;
+	private String room;
 	
 
 	public Schedule(){
@@ -20,6 +22,8 @@ public class Schedule {
 		setClassID(classID);
 		setClassName(className);
 		setTimes(times);
+		setBuilding(building);
+		setRoom(room);
 	}
 
 	public void setStudentID(int newStudentID){
@@ -68,4 +72,20 @@ public class Schedule {
 	public String getTimes(){
 		return this.times;
 	}	
+
+	public void setBuilding(String newBuilding){
+		building = newBuilding;
+	}
+
+	public String getBuilding(){
+		return this.building;
+	}
+
+	public void setRoom(String newRoom){
+		room = newRoom;
+	}
+
+	public String getRoom(){
+		return this.room;
+	}
 }
