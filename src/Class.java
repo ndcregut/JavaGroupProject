@@ -8,11 +8,11 @@ public class Class {
 	private String room;
 	private int creditHours;
 
-	public Class(){
+	public Class() throws ClassException{
 		//default constructor
 	}
 
-	public Class(int classID, String className, String days, String times, String building, String room, int creditHours){
+	public Class (int classID, String className, String days, String times, String building, String room, int creditHours) throws ClassException{
 		setClassID(classID);
 		setClassName(className);
 		setDays(days);
@@ -22,7 +22,7 @@ public class Class {
 		setCreditHours(creditHours);
 	}
 
-	public void setClassID(int newClassID){
+	public void setClassID(int newClassID) throws ClassException{
 		classID = newClassID;
 	}
 	
@@ -30,7 +30,7 @@ public class Class {
 		return this.classID;
 	}	
 	
-	public void setClassName(String newClassName){
+	public void setClassName(String newClassName)throws ClassException{
 		className = newClassName;
 	}
 	
@@ -38,7 +38,7 @@ public class Class {
 		return this.className;
 	}
 
-	public void setDays(String newDays){
+	public void setDays(String newDays)throws ClassException{
 		days = newDays;
 	}
 
@@ -46,7 +46,7 @@ public class Class {
 		return this.days;
 	}
 
-	public void setTimes(String newTimes){
+	public void setTimes(String newTimes)throws ClassException{
 		times = newTimes;
 	}
 
@@ -54,7 +54,7 @@ public class Class {
 		return this.times;
 	}
 
-	public void setBuilding(String newBuilding){
+	public void setBuilding(String newBuilding)throws ClassExecption{
 		building = newBuilding;
 	}
 
@@ -62,7 +62,7 @@ public class Class {
 		return this.building;
 	}
 	
-	public void setRoom(String newRoom){	
+	public void setRoom(String newRoom)throws ClassException{	
 		room = newRoom;
 	}
 
@@ -70,7 +70,7 @@ public class Class {
 		return this.room;
 	}
 
-	public void setCreditHours(int newCreditHours){
+	public void setCreditHours(int newCreditHours)throws ClassException{
 		creditHours = newCreditHours;
 	}
 
