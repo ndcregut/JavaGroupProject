@@ -7,12 +7,12 @@ public class StudentTranscript {
 	private String className;
 	private char grade;
 	
-	public StudentTranscript(){
+	public StudentTranscript()throws STranscriptException{
 		//Default constructor
 	}
 
 
-	public StudentTranscript(int studentID, String semester, int year, int classID, String className, char grade) {
+	public StudentTranscript(int studentID, String semester, int year, int classID, String className, char grade)throws STranscriptException {
 		//I removed the this.datafield and added the getter and setters so we can add Exceptions as needed
 		setStudentID(studentID);
 		setSemester(semester);
@@ -22,7 +22,7 @@ public class StudentTranscript {
 		setGrade(grade);
 	}
 
-	public void setStudentID(int newStudentID){
+	public void setStudentID(int newStudentID)throws STranscriptException{
 		studentID = newStudentID;
 	}
 	
@@ -30,7 +30,7 @@ public class StudentTranscript {
 		return this.studentID;
 	}
 
-	public void setSemester(String newSemester){
+	public void setSemester(String newSemester)throws STranscriptException{
 		semester = newSemester;
 	}
 
@@ -38,14 +38,14 @@ public class StudentTranscript {
 		return this.semester;
 	}
 
-	public void setYear(int newYear){
+	public void setYear(int newYear)throws STranscriptException{
 		year = newYear;
 	}
 
 	public int getYear(){
 		return this.year;
 	}
-	public void setClassID(int newClassID){
+	public void setClassID(int newClassID)throws STranscriptException{
 		classID = newClassID;
 	}
 	
@@ -53,7 +53,7 @@ public class StudentTranscript {
 		return this.classID;
 	}
 
-	public void setClassName(String newClassName){
+	public void setClassName(String newClassName)throws STranscriptException{
 		className = newClassName;
 	}
 	
@@ -61,7 +61,7 @@ public class StudentTranscript {
 		return this.className;
 	}
 
-	public void setGrade(char newGrade){	
+	public void setGrade(char newGrade)throws STranscriptException{	
 		grade = newGrade;
 	}
 
