@@ -10,7 +10,7 @@ public class Grade {
 		//default constructor
 	}
 
-	public Grade(char grade, int classID, String className, studentID)throws GradeException{
+	public Grade(char grade, int classID, String className, int studentID)throws GradeException{
 		setGrade(grade);
 		setClassID(classID);
 		setClassName(className);

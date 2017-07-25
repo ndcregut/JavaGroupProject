@@ -54,7 +54,7 @@ public class Class {
 		return this.times;
 	}
 
-	public void setBuilding(String newBuilding)throws ClassExecption{
+	public void setBuilding(String newBuilding)throws ClassException{
 		building = newBuilding;
 	}
 

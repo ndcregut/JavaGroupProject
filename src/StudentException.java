@@ -1,4 +1,4 @@
-public class StudentException{
+public class StudentException extends Exception{
 
 	//default constructor
 	public StudentException(){

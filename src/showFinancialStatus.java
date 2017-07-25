@@ -1,9 +1,10 @@
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class showFinancialStatus throws Exception{
+public class showFinancialStatus{
 
-	public static void main(String[] args){
+	public static void main(String[] args)throws Exception{
 		ArrayList<FinancialStatus> listOfStatus = new ArrayList<>();
 
 		//Data fields for Financial Status
@@ -21,15 +22,16 @@ public class showFinancialStatus throws Exception{
 		while(input.hasNext()){
 			studentID = input.nextInt();
 			accountBalance = input.nextFloat();
-			financialStatus = input.net();
+			financialStatus = input.next();
 
-			//use try-catch block to create Finanical Status instance
+			//use try-catch block to create Financial Status instance
 			try{
 				listOfStatus.add(new FinancialStatus(studentID, accountBalance, financialStatus));
 			}
 			
 			//prints exception
-			catch(FStatusException){
+			catch(FinancialException ex){
+				System.out.println(ex);
 			}
 		}
 		

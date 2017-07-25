@@ -43,7 +43,8 @@ public class viewCurrentSchedule{
 			}
 
 			//prints exception
-			catch(ScheduleException){
+			catch(ScheduleException ex){
+				System.out.println(ex);
 			}
 		}
 	}

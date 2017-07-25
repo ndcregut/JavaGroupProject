@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class viewCurrentGrades{
 
-	public static void main(String[] args)throws Execption{
+	public static void main(String[] args)throws Exception{
 
 		//Create new arraylist for grade objects
 		ArrayList<Grade> listOfGrades = new ArrayList<>();
@@ -30,11 +30,12 @@ public class viewCurrentGrades{
 		
 			//Use try-catch blocks to create Grade instance
 			try{
-				listOfGrades.add(new Grade(grade, classID, className, studentID);
+				listOfGrades.add(new Grade(grade, classID, className, studentID));
 			}
 			
 			//Prints exception
-			catch(GradeException){
+			catch(GradeException ex){
+				System.out.println(ex);
 			}
 
 			//Stub for search method

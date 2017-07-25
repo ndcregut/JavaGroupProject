@@ -1,4 +1,4 @@
-public class SLoginException{
+public class SLoginException extends Exception{
 	
 	//default constructor
 	public SLoginException(){
