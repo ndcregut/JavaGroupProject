@@ -7,12 +7,12 @@ public class Student {
 	private Date DOB;	// I think I have the type right on this.
 	char regStatus;		//Shortened this variable name so we have less to type, values here are (E=Enrolled, U=Unerolled, P=Pending)
 
-	public Student(){
+	public Student()throws StudentException{
 		//default constructor
 	}
 
 
-	public Student(String fName, String lName, int studentID, Date DOB, char regStatus) {
+	public Student(String fName, String lName, int studentID, Date DOB, char regStatus)throws StudentException {
 
 		setFName(fName);
 		setLName(lName);
@@ -21,7 +21,7 @@ public class Student {
 		setRegStatus(regStatus);
 	}
 
-	public void setFName(String newfName){
+	public void setFName(String newfName)throws StudentException{
 		fName = newfName;
 	}
 
@@ -29,7 +29,7 @@ public class Student {
 		return this.fName;
 	}
 
-	public void setLName(String newlName){
+	public void setLName(String newlName)throws StudentException{
 		lName = newlName;
 	}
 
@@ -37,7 +37,7 @@ public class Student {
 		return this.lName;
 	}
 
-	public void setStudentID(int newStudentID){
+	public void setStudentID(int newStudentID)throws StudentException{
 		studentID = newStudentID;
 	}
 
@@ -45,7 +45,7 @@ public class Student {
 		return this.studentID;
 	}
 
-	public void setDOB(Date newDOB){
+	public void setDOB(Date newDOB)throws StudentException{
 		DOB = newDOB;
 	}
 
@@ -53,7 +53,7 @@ public class Student {
 		return this.DOB;
 	}
 
-	public void setRegStatus(char newregStatus){
+	public void setRegStatus(char newregStatus)throws StudentException{
 		regStatus = newregStatus;
 	}
 
