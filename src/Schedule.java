@@ -5,6 +5,7 @@ public class Schedule {
 	private int year;
 	private int classID;
 	private String className;
+	private String days;
 	private String times;
 	private String building;
 	private String room;
@@ -14,13 +15,14 @@ public class Schedule {
 		//default constructor
 	}
 
-	public Schedule(int studentID, String semester, int year, int classID, String className, String times)throws ScheduleException {
+	public Schedule(int studentID, String semester, int year, int classID, String className, String days, String times, String building, String room)throws ScheduleException {
 		//Added getters and setters data fields in case we need to add exceptions
 		setStudentID(studentID);
 		setSemester(semester);
 		setYear(year);
 		setClassID(classID);
 		setClassName(className);
+		setDays(days);
 		setTimes(times);
 		setBuilding(building);
 		setRoom(room);
@@ -63,6 +65,14 @@ public class Schedule {
 
 	public String getClassName(){
 		return this.className;
+	}
+
+	public void setDays(String newDays)throws ScheduleException{
+		days = newDays;
+	}
+
+	public String getDays(){
+		return this.days;
 	}
 
 	public void setTimes(String newTimes)throws ScheduleException{

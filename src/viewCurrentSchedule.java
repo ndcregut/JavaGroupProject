@@ -14,6 +14,7 @@ public class viewCurrentSchedule{
 		int year;
 		int classID;
 		String className;
+		String days;
 		String times;
 		String building;
 		String room;
@@ -31,13 +32,14 @@ public class viewCurrentSchedule{
 			year = input.nextInt();
 			classID = input.nextInt();
 			className = input.next();
+			days = input.next();
 			times = input.next();
 			building = input.next();
 			room = input.next();
 
 			//Used try-catch blocks to create Schedule instance
 			try{
-				listOfSchedule.add(new Schedule(studentID, semester, year, classID, className, times, building, room));
+				listOfSchedule.add(new Schedule(studentID, semester, year, classID, className, days, times, building, room));
 			}
 
 			//prints exception
