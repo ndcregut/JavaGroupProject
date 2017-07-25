@@ -4,18 +4,18 @@ public class FinancialStatus {
 	private float accountBalance;
 	private	String financialStatus;
 
-	public FinancialStatus(){
+	public FinancialStatus()throws FinancialException{
 		//default construtor
 	}
 
-	public FinancialStatus(int studentID, float accountBalance, String financialStatus){
+	public FinancialStatus(int studentID, float accountBalance, String financialStatus)throws FinancialException{
 		setStudentID(studentID);
 		setAccountBalance(accountBalance);
 		setFinancialStatus(financialStatus);
 	}
 
 
-	public void setStudentID(int newStudentID){
+	public void setStudentID(int newStudentID)throws FinancialException{
 		studentID = newStudentID;
 	}
 
@@ -23,7 +23,7 @@ public class FinancialStatus {
 		return this.studentID;
 	}
 
-	public void setAccountBalance(float newAccountBalance){	
+	public void setAccountBalance(float newAccountBalance)throws FinancialException{	
 		accountBalance = newAccountBalance;
 	}
 
@@ -31,7 +31,7 @@ public class FinancialStatus {
 		return this.accountBalance;
 	}
 
-	public void setFinancialStatus(String newFinancialStatus){
+	public void setFinancialStatus(String newFinancialStatus)throws FinancialException{
 		financialStatus = newFinancialStatus;
 	}
 	
