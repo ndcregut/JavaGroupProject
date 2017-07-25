@@ -5,17 +5,17 @@ public class Grade {
 	private String className;
 
 
-	public Grade(){
+	public Grade()throws GradeException{
 		//default constructor
 	}
 
-	public Grade(char grade, int classID, String className){
+	public Grade(char grade, int classID, String className)throws GradeException{
 		setGrade(grade);
 		setClassID(classID);
 		setClassName(className);
 	}
 
-	public void setGrade(char newGrade){
+	public void setGrade(char newGrade)throws GradeException{
 		grade = newGrade;
 	}
 
@@ -23,7 +23,7 @@ public class Grade {
 		return this.grade;
 	}
 
-	public void setClassID(int newClassID){
+	public void setClassID(int newClassID)throws GradeException{
 		classID = newClassID;
 	}
 
@@ -31,7 +31,7 @@ public class Grade {
 		return this.classID;
 	}
 
-	public void setClassName(String newClassName){
+	public void setClassName(String newClassName)throws GradeException{
 		className = newClassName;
 	}
 
