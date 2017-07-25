@@ -10,11 +10,11 @@ public class Schedule {
 	private String room;
 	
 
-	public Schedule(){
+	public Schedule()throws ScheduleException{
 		//default constructor
 	}
 
-	public Schedule(int studentID, String semester, int year, int classID, String className, String times) {
+	public Schedule(int studentID, String semester, int year, int classID, String className, String times)throws ScheduleException {
 		//Added getters and setters data fields in case we need to add exceptions
 		setStudentID(studentID);
 		setSemester(semester);
@@ -26,7 +26,7 @@ public class Schedule {
 		setRoom(room);
 	}
 
-	public void setStudentID(int newStudentID){
+	public void setStudentID(int newStudentID)throws ScheduleException{
 		studentID = newStudentID;
 	}
 
@@ -34,7 +34,7 @@ public class Schedule {
 		return this.studentID;
 	}
 
-	public void setSemester(String newSemester){
+	public void setSemester(String newSemester)throws ScheduleException{
 		semester = newSemester;
 	}
 
@@ -42,7 +42,7 @@ public class Schedule {
 		return this.semester;
 	}
 
-	public void setYear(int newYear){
+	public void setYear(int newYear)throws ScheduleException{
 		year = newYear;
 	}
 
@@ -50,14 +50,14 @@ public class Schedule {
 		return this.year;
 	}
 
-	public void setClassID(int newClassID){
+	public void setClassID(int newClassID)throws ScheduleException{
 		classID = newClassID;
 	}
 
 	public int getClassID(){
 		return this.classID;
 	}	
-	public void setClassName(String newClassName){
+	public void setClassName(String newClassName)throws ScheduleException{
 		className = newClassName;
 	}
 
@@ -65,7 +65,7 @@ public class Schedule {
 		return this.className;
 	}
 
-	public void setTimes(String newTimes){
+	public void setTimes(String newTimes)throws ScheduleException{
 		times = newTimes;
 	}
 
@@ -73,7 +73,7 @@ public class Schedule {
 		return this.times;
 	}	
 
-	public void setBuilding(String newBuilding){
+	public void setBuilding(String newBuilding)throws ScheduleException{
 		building = newBuilding;
 	}
 
@@ -81,7 +81,7 @@ public class Schedule {
 		return this.building;
 	}
 
-	public void setRoom(String newRoom){
+	public void setRoom(String newRoom)throws ScheduleException{
 		room = newRoom;
 	}
 
