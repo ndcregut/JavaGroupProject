@@ -33,28 +33,210 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="Computer Science I" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label text="Calculus" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label text="Introduction to Speech" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label text="Introduction to Computers" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label text="Composition I" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label text="Class" GridPane.halignment="CENTER">
+            <Label text="Computer Science I" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="Calculus" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="Introduction to Speech" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="Introduction to Computers" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="09:00 AM - 10:15AM" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="10:30 AM - 11:45 AM" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="12:00 PM - 01:00 PM" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="03:00 PM - 04:15 PM" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="Composition I" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="02:30 PM - 03:45PM" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin></Label>
+            <Label text="Class Name" GridPane.columnIndex="1" GridPane.halignment="LEFT">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
             </Label>
-            <Label text="Start Time - End Time" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <Label text="Start-End Times" GridPane.columnIndex="3" GridPane.halignment="LEFT">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Class ID">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Days" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Room #" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Building" GridPane.columnIndex="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Math 201" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="COMM 150" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="ENG 100" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="CSC 150" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="CSC 100" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Tu" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="M-Th" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="M-W-F" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="T-Th" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="M-W-F" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Piers" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Adams" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Lincoln" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Adams" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Feynman" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="A105" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="A320" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="F204" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="D42" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="A101" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
             </Label>
          </children>
       </GridPane>
-      <Button layoutX="284.0" layoutY="361.0" mnemonicParsing="false" text="OK" />
+      <Label layoutX="25.0" layoutY="169.0" text="Fall">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="169.0" text="2017">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="327.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@Logo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="25.0" layoutY="138.0" text="Student ID" />
+      <TextField layoutX="99.0" layoutY="134.0" text="8546" />
+      <Button layoutX="161.0" layoutY="339.0" mnemonicParsing="false" text="Back to Menu" />
+      <Button layoutX="377.0" layoutY="339.0" mnemonicParsing="false" text="Exit SAIS" />
    </children>
 </AnchorPane>
