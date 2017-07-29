@@ -12,13 +12,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane gridLinesVisible="true" layoutX="99.0" layoutY="140.0" prefHeight="120.0" prefWidth="450.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="200.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="75.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="66.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="47.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="131.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="88.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="67.0" />
@@ -97,7 +97,7 @@
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Days" GridPane.columnIndex="2">
+            <Label prefWidth="46.0" text="Days" GridPane.columnIndex="2">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -229,14 +229,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="327.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="10.0">
+      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <image>
-            <Image url="@Logo.jpg" />
+            <Image url="@../../resources/Logo%5B96%5D.jpg" />
          </image>
       </ImageView>
       <Label layoutX="25.0" layoutY="138.0" text="Student ID" />
       <TextField layoutX="99.0" layoutY="134.0" text="8546" />
-      <Button layoutX="161.0" layoutY="339.0" mnemonicParsing="false" text="Back to Menu" />
-      <Button layoutX="377.0" layoutY="339.0" mnemonicParsing="false" text="Exit SAIS" />
+      <Button layoutX="161.0" layoutY="339.0" mnemonicParsing="false" text="Back to Menu" AnchorPane.bottomAnchor="36.0" />
+      <Button layoutX="377.0" layoutY="339.0" mnemonicParsing="false" text="Exit SAIS" AnchorPane.bottomAnchor="36.0" />
    </children>
 </AnchorPane>

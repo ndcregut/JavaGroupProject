@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="109.0" layoutY="88.0" />
       <TextField layoutX="109.0" layoutY="125.0" />
@@ -16,7 +16,7 @@
       <Button layoutX="215.0" layoutY="161.0" mnemonicParsing="false" text="Confirm" />
       <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="9.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="10.0">
          <image>
-            <Image url="@Logo.jpg" />
+            <Image url="@../../resources/Logo%5B96%5D.jpg" />
          </image>
       </ImageView>
    </children>
