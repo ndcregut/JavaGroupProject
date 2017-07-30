@@ -1,13 +1,13 @@
 
 public class StudentLogin {
 	private int studentID;
-	private String DOB;
+	private int DOB;
 
 	public StudentLogin()throws SLoginException{
 		//default constructor
 	}
 
-	public StudentLogin(int studentID, String DOB)throws SLoginException{	
+	public StudentLogin(int studentID, int DOB)throws SLoginException{	
 		setStudentID(studentID);
 		setDOB(DOB);
 	}
@@ -20,11 +20,11 @@ public class StudentLogin {
 		return this.studentID;
 	}
 
-	public void setDOB(String newDOB)throws SLoginException{
+	public void setDOB(int newDOB)throws SLoginException{
 		DOB = newDOB;
 	}
 
-	public String getDOB(){
+	public int getDOB(){
 		return this.DOB;
 	}
 }

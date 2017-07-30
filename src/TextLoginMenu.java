@@ -5,7 +5,7 @@ public class TextLoginMenu {
 
 	public static boolean textLoginMenu(ArrayList<Student> list) throws StudentException, SLoginException {
 		int studentID = 0;
-		String DOB = "";
+		int DOB = 0;
 		//Create scanner for input
 		Scanner input = new Scanner(System.in);
 
@@ -26,7 +26,7 @@ public class TextLoginMenu {
 		//Get DOB from student
 		System.out.println("Please enter your DOB (mmddyyyy): ");
 		try{		
-			DOB = input.next();
+			DOB = input.nextInt();
 		}
 
 		//prints exception
@@ -35,11 +35,13 @@ public class TextLoginMenu {
 			//we need to reset the DOB text box here.
 		}
 
-		StudentLogin studentLogin = new StudentLogin(studentID, DOB);
+		StudentLogin studentLogin = new StudentLogin(studentID, DOB);		
 		Student student = new Student();
 		for(int i = 0; i < list.size(); i++) {
 			student = list.get(i);
-			if(student.getStudentID() == studentLogin.getStudentID() && student.getDOB() == studentLogin.getDOB()) {
+			int stuID = student.getStudentID();
+			int stuDOB = student.getDOB();
+			if(stuDOB == DOB) {
 				System.out.println("Student Logged In.");
 				input.close();
 				return true;
@@ -48,6 +50,7 @@ public class TextLoginMenu {
 		
 		//Close login menu with successful login (maintain student id object)
 	input.close();
+	System.out.println("Student Not Found");
 	return false;
 	}
 }

@@ -4,15 +4,15 @@ public class Student {
 	private	String fName;
 	private	String lName;
 	private int studentID;
-	private String DOB;	// mmddyyyy
-	char regStatus;		//Shortened this variable name so we have less to type, values here are (E=Enrolled, U=Unerolled, P=Pending)
+	private int DOB;	// mmddyyyy
+	char regStatus;		//Shortened this variable name so we have less to type, values here are (E=Enrolled, U=Unenrolled, P=Pending)
 
 	public Student()throws StudentException{
 		//default constructor
 	}
 
 
-	public Student(String fName, String lName, int studentID, String DOB, char regStatus)throws StudentException {
+	public Student(String fName, String lName, int studentID, int DOB, char regStatus)throws StudentException {
 
 		setFName(fName);
 		setLName(lName);
@@ -45,11 +45,11 @@ public class Student {
 		return this.studentID;
 	}
 
-	public void setDOB(String newDOB)throws StudentException{
+	public void setDOB(int newDOB)throws StudentException{
 		DOB = newDOB;
 	}
 
-	public String getDOB(){
+	public int getDOB(){
 		return this.DOB;
 	}
 

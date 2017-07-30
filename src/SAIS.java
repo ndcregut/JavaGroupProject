@@ -19,10 +19,7 @@ public class SAIS{
 		// main loop to run the program
 		while (exit == false) {
 			while (login == false) {
-				// create login menu
-				// textStudentLogin(list);
 				login = TextLoginMenu.textLoginMenu(list);
-				login = true; // temporary line until the above is written
 			}
 			//Create main menu with options
 			//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
@@ -35,7 +32,7 @@ public class SAIS{
 		String fName;
 		String lName;
 		int studentID;
-		String DOB;
+		int DOB;
 		char regStatus;
 		String temp = "";
 		
@@ -53,7 +50,8 @@ public class SAIS{
 			fName = input.next();
 			lName = input.next();
 			studentID = Integer.parseInt(input.next());
-			DOB = input.next();
+			DOB = input.nextInt();
+			temp = input.next();
 			regStatus = temp.charAt(0);
 			list.add(new Student(fName, lName, studentID, DOB, regStatus));
 		}
