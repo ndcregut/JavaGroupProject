@@ -1,33 +1,30 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class TextLoginMenu {
+public class TextLoginMenu {	
 	
-	public static StudentLogin studentLogin	;	
 	public static Student student;
 	static {
-		try {
-			studentLogin = new StudentLogin(0, 0);	
-		} catch (Exception SLoginException) {
-		}
 		try {
 			student = new Student();
 		} catch (Exception StudentException) {
 		}
 	}
 	
-	public static boolean textLoginMenu(ArrayList<Student> list) throws StudentException, SLoginException {
+	public static void textLoginMenu(ArrayList<Student> list) throws StudentException, SLoginException {
 		int studentID = 0;
 		int DOB = 0;
 		//Create scanner for input
 		Scanner input = new Scanner(System.in);
 
 		//Get student id from student
-		System.out.println("Please enter your student ID (numbers only): ");
+		System.out.println("Please enter your student ID (numbers only or enter 9 to exit): ");
 	
 		//Use try-catch blocks to create student id
 		try{
 				studentID = input.nextInt();
+				if (studentID == 9)
+					System.exit(0);
 		}
 		//prints exception
 		catch(Exception ex){
@@ -47,13 +44,13 @@ public class TextLoginMenu {
 			//we need to reset the DOB text box here.
 		}
 
-		TextLoginMenu.studentLogin.setDOB(DOB);
-		TextLoginMenu.studentLogin.setStudentID(studentID);
+		SAIS.studentLogin.setDOB(DOB);
+		SAIS.studentLogin.setStudentID(studentID);
 		for(int i = 0; i < list.size(); i++) {
 			student = list.get(i);
-			if(student.getDOB() == studentLogin.getDOB() && student.getStudentID() == studentLogin.getStudentID()) {
+			if(student.getDOB() == SAIS.studentLogin.getDOB() && student.getStudentID() == SAIS.studentLogin.getStudentID()) {
 				System.out.println("Student Logged In.");
-				return true;
+				SAIS.studentLogin.setLoggedIn(1);
 			}
 		}
 		/*When you are reading using Scanner from System.in, you should not close any 
@@ -63,6 +60,5 @@ public class TextLoginMenu {
 		 * The Java VM collects the garbage and no memory leak happens.
 		 */
 	System.out.println("Student Not Found");
-	return false;
 	}
 }

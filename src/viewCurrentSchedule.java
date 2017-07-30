@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class viewCurrentSchedule{
 
-	public static void readSchedules() throws Exception{
+	public static void readSchedules(StudentLogin StudentLogin) throws Exception{
 
 		//Create new arraylist of Schedule
 		ArrayList<Schedule> listOfSchedule = new ArrayList<>();
@@ -46,6 +46,8 @@ public class viewCurrentSchedule{
 			catch(ScheduleException ex){
 				System.out.println(ex);
 			}
+			
+			
 		}
 	}
 }

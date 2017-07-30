@@ -4,23 +4,32 @@ import java.util.Date;
 import java.io.*;
 
 public class SAIS{
+	
+	public static StudentLogin studentLogin;
+	static {
+		try {
+			studentLogin = new StudentLogin(0, 0, 0);	
+		} catch (Exception SLoginException) {
+		}
+		
+	}
 
 	public static void main(String[] args) throws StudentException, SLoginException, Exception {
-		
-		boolean login = false; // turns true once a student logs in
-											// and false once a student logs out
-		boolean exit = false; // while false the program will continue looping
-								// when true the program will exit
 								
 		// read Student.txt and create ArrayList of Students from the data file
 		ArrayList<Student> list = new ArrayList<Student>();
 		readStudentFile(list);
 		
 		// main loop to run the program
-		while (exit == false) {
-			while (login == false)
-				login = TextLoginMenu.textLoginMenu(list);
-			exit = TextMainMenu.mainMenu(TextLoginMenu.student);
+		while (studentLogin.getLoggedIn() != 2 ) {
+			while (studentLogin.getLoggedIn() == 0)
+				TextLoginMenu.textLoginMenu(list);
+			TextMainMenu.mainMenu(studentLogin);
+			if (studentLogin.getLoggedIn() == 2) {
+				studentLogin.setLoggedIn(0);
+				studentLogin.setDOB(0);
+				studentLogin.setStudentID(0);
+			}
 			//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
 		}
 	}
