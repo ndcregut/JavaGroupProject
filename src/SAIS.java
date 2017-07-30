@@ -1,61 +1,62 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Date;
+import java.io.*;
 
 public class SAIS{
 
-
-
-	public static void main(String[] args) throws Excecption{
+	public static void main(String[] args) throws StudentException, SLoginException {
 		
-		//create login menu
-
-
-		//Create scanner for input
-		Scanner input = new Scanner(System.in);
-
-		//Get student id from student
-		System.out.println("Please enter your student ID (numbers only): ");
-	
-		//Use try-catch blocks to create student id
-		try{
-			int studentID = nextInt();
-		}	
+		boolean login = false; // turns true once a student logs in
+											// and false once a student logs out
+		boolean exit = false; // while false the program will continue looping
+								// when true the program will exit
+								
+		// read Student.txt and create ArrayList of Students from the data file
+		ArrayList<Student> list = new ArrayList<Student>();
+		readStudentFile(list);
 		
-		//prints exception
-		catch(Exception ex){
-			System.out.println(ex);		//default exception here, may need to give better explanation or create custom exception
-			//we need to reset the student text box here.
+		// main loop to run the program
+		while (exit == false) {
+			while (login == false) {
+				// create login menu
+				// textStudentLogin(list);
+				login = TextLoginMenu.textLoginMenu(list);
+				login = true; // temporary line until the above is written
+			}
+			//Create main menu with options
+			//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
+			exit = true; // temporary line until the above is written
 		}
-
-		//Get DOB from student
-		System.out.println("Please enter your DOB (mmyyyy): ");
-		try{		
-			Date DOB = nextDate();
-		}
-
-		//prints exception
-		catch(Exception ex){
-			System.out.println(ex);		//default exception here, may need to give better explanation or create custom exception
-			//we need to reset the DOB text box here.
-		}
-
-
-		
-		//Close login menu with successful login (maintain student id object)
-
-		//Create main menu with options 
-
-		//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
-	
-		
+			
 	}
+	
+	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
+		String fName;
+		String lName;
+		int studentID;
+		String DOB;
+		char regStatus;
+		String temp = "";
+		
+	Scanner input = null;
+    try
+    {
+      input = new Scanner(new File("Student.txt"));
+    }
+    catch(FileNotFoundException s)
+    {
+      System.out.println("File does Not Exist Please Try Again: ");
+    }
 
-
-	public class LoginMenu{
-		//Stub
-	}
-
-	public class Menu{
-		//Stub
+		while (input.hasNext()) {
+			fName = input.next();
+			lName = input.next();
+			studentID = Integer.parseInt(input.next());
+			DOB = input.next();
+			regStatus = temp.charAt(0);
+			list.add(new Student(fName, lName, studentID, DOB, regStatus));
+		}
+		input.close();
 	}
 }

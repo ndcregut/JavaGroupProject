@@ -4,7 +4,7 @@ public class Student {
 	private	String fName;
 	private	String lName;
 	private int studentID;
-	private Date DOB;	// I think I have the type right on this.
+	private String DOB;	// mmddyyyy
 	char regStatus;		//Shortened this variable name so we have less to type, values here are (E=Enrolled, U=Unerolled, P=Pending)
 
 	public Student()throws StudentException{
@@ -12,7 +12,7 @@ public class Student {
 	}
 
 
-	public Student(String fName, String lName, int studentID, Date DOB, char regStatus)throws StudentException {
+	public Student(String fName, String lName, int studentID, String DOB, char regStatus)throws StudentException {
 
 		setFName(fName);
 		setLName(lName);
@@ -45,11 +45,11 @@ public class Student {
 		return this.studentID;
 	}
 
-	public void setDOB(Date newDOB)throws StudentException{
+	public void setDOB(String newDOB)throws StudentException{
 		DOB = newDOB;
 	}
 
-	public Date getDOB(){
+	public String getDOB(){
 		return this.DOB;
 	}
 
