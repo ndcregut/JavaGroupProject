@@ -4,7 +4,7 @@ public class StudentLogin {
 	private int DOB;
 	private int loggedIn;
 
-	public StudentLogin()throws SLoginException{
+	public StudentLogin() throws SLoginException{
 		//default constructor
 	}
 

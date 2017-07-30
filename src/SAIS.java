@@ -11,9 +11,7 @@ public class SAIS{
 			studentLogin = new StudentLogin(0, 0, 0);	
 		} catch (Exception SLoginException) {
 		}
-		
 	}
-
 	public static void main(String[] args) throws StudentException, SLoginException, Exception {
 								
 		// read Student.txt and create ArrayList of Students from the data file
@@ -42,15 +40,15 @@ public class SAIS{
 		char regStatus;
 		String temp = "";
 		
-	Scanner input = null;
-    try
-    {
-      input = new Scanner(new File("Student.txt"));
-    }
-    catch(FileNotFoundException s)
-    {
-      System.out.println("File does Not Exist Please Try Again: ");
-    }
+		Scanner input = null;
+		try
+		{
+			input = new Scanner(new File("Student.txt"));
+		}
+		catch(FileNotFoundException s)
+		{
+			System.out.println("File does Not Exist Please Try Again: ");
+		}
 
 		while (input.hasNext()) {
 			fName = input.next();
@@ -61,6 +59,5 @@ public class SAIS{
 			regStatus = temp.charAt(0);
 			list.add(new Student(fName, lName, studentID, DOB, regStatus));
 		}
-		input.close();
 	}
 }

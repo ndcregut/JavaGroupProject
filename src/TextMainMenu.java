@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TextMainMenu {
 	
-	public static void mainMenu(StudentLogin StudentLogin) throws Exception{
+	public static void mainMenu(StudentLogin studentLogin) throws Exception{
 		int selection = 0;
 		//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
 		System.out.println();
@@ -24,7 +24,7 @@ public class TextMainMenu {
 			//we need to reset the student text box here.
 		}
 		if (selection == 1) {
-			viewCurrentSchedule.readSchedules(StudentLogin);
+			viewCurrentSchedule.readSchedules(studentLogin);
 			selection = 4;
 		}
 		else if (selection == 2)
@@ -32,7 +32,7 @@ public class TextMainMenu {
 		else if (selection == 3)
 			selection = 4;
 		else if (selection == 4) {
-			StudentLogin.setLoggedIn(2);
+			studentLogin.setLoggedIn(2);
 			return;
 		}
 		else {
