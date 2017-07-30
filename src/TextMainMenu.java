@@ -27,8 +27,10 @@ public class TextMainMenu {
 			viewCurrentSchedule.readSchedules(studentLogin);
 			selection = 4;
 		}
-		else if (selection == 2)
+		else if (selection == 2) {
+			viewCurrentGrades.readGrades(studentLogin);
 			selection = 4;
+		}
 		else if (selection == 3)
 			selection = 4;
 		else if (selection == 4) {
