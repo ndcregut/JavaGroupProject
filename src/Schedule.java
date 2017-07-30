@@ -3,7 +3,7 @@ public class Schedule {
 	private int studentID;
 	private String semester;
 	private int year;
-	private int classID;
+	private String classID;
 	private String className;
 	private String days;
 	private String times;
@@ -15,7 +15,7 @@ public class Schedule {
 		//default constructor
 	}
 
-	public Schedule(int studentID, String semester, int year, int classID, String className, String days, String times, String building, String room)throws ScheduleException {
+	public Schedule(int studentID, String semester, int year, String classID, String className, String days, String times, String building, String room)throws ScheduleException {
 		//Added getters and setters data fields in case we need to add exceptions
 		setStudentID(studentID);
 		setSemester(semester);
@@ -52,11 +52,11 @@ public class Schedule {
 		return this.year;
 	}
 
-	public void setClassID(int newClassID)throws ScheduleException{
+	public void setClassID(String newClassID)throws ScheduleException{
 		classID = newClassID;
 	}
 
-	public int getClassID(){
+	public String getClassID(){
 		return this.classID;
 	}	
 	public void setClassName(String newClassName)throws ScheduleException{

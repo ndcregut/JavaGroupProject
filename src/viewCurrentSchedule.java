@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class viewCurrentSchedule{
 
-	public static void main(String[] args) throws Exception{
+	public static void readSchedules() throws Exception{
 
 		//Create new arraylist of Schedule
 		ArrayList<Schedule> listOfSchedule = new ArrayList<>();
@@ -12,7 +12,7 @@ public class viewCurrentSchedule{
 		int studentID;
 		String semester;
 		int year;
-		int classID;
+		String classID;
 		String className;
 		String days;
 		String times;
@@ -27,10 +27,10 @@ public class viewCurrentSchedule{
 
 		//loop to read contents of Schedule.txt
 		while(input.hasNext()){
-			studentID = input.nextInt();
+			studentID = Integer.parseInt(input.next());
 			semester = input.next();
-			year = input.nextInt();
-			classID = input.nextInt();
+			year = Integer.parseInt(input.next());
+			classID = input.next();
 			className = input.next();
 			days = input.next();
 			times = input.next();

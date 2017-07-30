@@ -5,7 +5,7 @@ import java.io.*;
 
 public class SAIS{
 
-	public static void main(String[] args) throws StudentException, SLoginException {
+	public static void main(String[] args) throws StudentException, SLoginException, Exception {
 		
 		boolean login = false; // turns true once a student logs in
 											// and false once a student logs out
@@ -18,14 +18,11 @@ public class SAIS{
 		
 		// main loop to run the program
 		while (exit == false) {
-			while (login == false) {
+			while (login == false)
 				login = TextLoginMenu.textLoginMenu(list);
-			}
-			//exit = mainMenu(TextLoginMenu.student)
+			exit = TextMainMenu.mainMenu(TextLoginMenu.student);
 			//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
-			exit = true; // temporary line until the above is written
 		}
-			
 	}
 	
 	public static void readStudentFile(ArrayList<Student> list) throws StudentException {

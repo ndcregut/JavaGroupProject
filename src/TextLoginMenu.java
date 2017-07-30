@@ -7,17 +7,12 @@ public class TextLoginMenu {
 	public static Student student;
 	static {
 		try {
-			studentLogin = new StudentLogin(0, 0);
-			
+			studentLogin = new StudentLogin(0, 0);	
 		} catch (Exception SLoginException) {
-			
 		}
-		
 		try {
 			student = new Student();
-			
 		} catch (Exception StudentException) {
-			
 		}
 	}
 	
@@ -58,13 +53,15 @@ public class TextLoginMenu {
 			student = list.get(i);
 			if(student.getDOB() == studentLogin.getDOB() && student.getStudentID() == studentLogin.getStudentID()) {
 				System.out.println("Student Logged In.");
-				// input.close();
 				return true;
 			}
 		}
-		
-		//Close login menu with successful login (maintain student id object)
-	// input.close();
+		/*When you are reading using Scanner from System.in, you should not close any 
+		 * Scanner instances because closing one will close System.in and when you do 
+		 * the following, NoSuchElementException will be thrown when someone enters
+		 * an incorrect login. It does not happen when a correct login is entered.
+		 * The Java VM collects the garbage and no memory leak happens.
+		 */
 	System.out.println("Student Not Found");
 	return false;
 	}
