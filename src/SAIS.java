@@ -21,7 +21,7 @@ public class SAIS{
 			while (login == false) {
 				login = TextLoginMenu.textLoginMenu(list);
 			}
-			//Create main menu with options
+			//exit = mainMenu(TextLoginMenu.student)
 			//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
 			exit = true; // temporary line until the above is written
 		}
