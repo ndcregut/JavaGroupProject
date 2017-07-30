@@ -5,7 +5,7 @@ public class FinancialStatus {
 	private	String financialStatus;
 
 	public FinancialStatus()throws FinancialException{
-		//default construtor
+		//default constructor
 	}
 
 	public FinancialStatus(int studentID, float accountBalance, String financialStatus)throws FinancialException{
