@@ -31,8 +31,10 @@ public class TextMainMenu {
 			viewCurrentGrades.readGrades(studentLogin);
 			selection = 4;
 		}
-		else if (selection == 3)
+		else if (selection == 3) {
+			showFinancialStatus.financialStatus(studentLogin);
 			selection = 4;
+		}
 		else if (selection == 4) {
 			studentLogin.setLoggedIn(2);
 			return;

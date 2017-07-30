@@ -51,6 +51,7 @@ public class TextLoginMenu {
 			if(student.getDOB() == SAIS.studentLogin.getDOB() && student.getStudentID() == SAIS.studentLogin.getStudentID()) {
 				System.out.println("Student Logged In.");
 				SAIS.studentLogin.setLoggedIn(1);
+				return;
 			}
 		}
 		/*When you are reading using Scanner from System.in, you should not close any 
