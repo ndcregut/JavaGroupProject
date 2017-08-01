@@ -1,8 +1,11 @@
 package view;
 
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import saisapp.SAISMain;
 import saisapp.StudentLogin;
 import saisapp.Student;
@@ -10,6 +13,12 @@ import saisapp.SAIS;
 import saisapp.SLoginException;
 import saisapp.StudentException;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class SAISLoginController{
  @FXML
@@ -24,7 +33,11 @@ public class SAISLoginController{
  @FXML
  private Label errorLabel;
  
- private SAISMain saisMain;		//may need to change this line 
+private SAISMain saisMain;		//may need to change this line 
+private Stage primaryStage;
+private BorderPane rootLayout;
+ 
+ 
  
  public SAISLoginController(){
 	 
@@ -57,14 +70,16 @@ public class SAISLoginController{
 	 else{
 		 errorLabel.setTextFill(Color.web("rgb(255,255,255)"));
 		 //New scene =menu
+		 
+		 
 	 }
 	
-	 
-	 
-	 
+	 	 
  }
- 
- /*private void handleConfirm(){
-	 confirmLogin();
- }*/
+
+private void (String string) {
+	// TODO Auto-generated method stub
+	
+}
+
 }
