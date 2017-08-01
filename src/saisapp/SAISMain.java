@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.Scene;
 import view.SAISLoginController;
+import view.SAISMenuController;
 
 public class SAISMain extends Application {
 

@@ -7,7 +7,7 @@ import saisapp.StudentLogin;
 
 public class SAIS{
 	
-	public static Student studentLogin(StudentLogin newSLong) throws StudentException{
+	public static int studentLogin(StudentLogin newSLong) throws StudentException{
 		int sid = newSLong.getStudentID();
 		int dob = newSLong.getDOB();
 		
@@ -52,34 +52,15 @@ public class SAIS{
 			sRegStatus = list.get(i).getRegStatus();
 			
 			if(sid == ssid && dob == sdob){				
-				Student curStudent = new Student(sFName, sLName, ssid, sdob, sRegStatus);
-				System.out.println("Valid Login");
+	
+				int curStudent= ssid;
+	
 				return curStudent;
 			}
 		}
-		Student curStudent = new Student();
-		System.out.println("InValid Login");
-		return curStudent;
+	
+		return 0;
 	}
-	/*public static void main(String[] args) throws StudentException, SLoginException, Exception {
-								
-		// read Student.txt and create ArrayList of Students from the data file
-		ArrayList<Student> list = new ArrayList<Student>();
-		readStudentFile(list);
-		
-		// main loop to run the program
-		while (studentLogin.getLoggedIn() != 2 ) {
-			while (studentLogin.getLoggedIn() == 0)
-				TextLoginMenu.textLoginMenu(list);
-			TextMainMenu.mainMenu(studentLogin);
-			if (studentLogin.getLoggedIn() == 2) {
-				studentLogin.setLoggedIn(0);
-				studentLogin.setDOB(0);
-				studentLogin.setStudentID(0);
-			}
-			//Run option(s) as selected by user (getCurrentSchedule, viewCurrentGrades, showFinancialStatus, Exit)
-		}
-	}*/
 	
 	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
 		String fName;

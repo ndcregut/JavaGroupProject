@@ -9,6 +9,7 @@ import saisapp.Student;
 import saisapp.SAIS;
 import saisapp.SLoginException;
 import saisapp.StudentException;
+import javafx.scene.paint.Color;
 
 public class SAISLoginController{
  @FXML
@@ -20,6 +21,8 @@ public class SAISLoginController{
  private TextField userNameField;
  @FXML
  private TextField passwordField;
+ @FXML
+ private Label errorLabel;
  
  private SAISMain saisMain;		//may need to change this line 
  
@@ -29,8 +32,9 @@ public class SAISLoginController{
  
  @FXML
  private void initialize(){
-	 userNameField.setText("Enter your student id.");
-	 passwordField.setText("Enter your password");
+	 userNameField.setPromptText("Enter your student id.");
+	 passwordField.setPromptText("Enter your password");
+	 
  }
  
  public void setSAISMain(SAISMain saisMain){
@@ -38,16 +42,24 @@ public class SAISLoginController{
  }
  
  @FXML
- private Student handleConfirm() throws StudentException, SLoginException{
+ private void handleConfirm() throws StudentException, SLoginException{
 	 int userName = Integer.valueOf(userNameField.getText());
 	 int password = Integer.valueOf(passwordField.getText());
 	 
 	 StudentLogin slong = new StudentLogin(userName, password, 0);
-	 Student curStudent = new Student();
+	 int curStudent;
 	 
 	 curStudent = SAIS.studentLogin(slong);
 	 
-	 return curStudent;
+	 if(curStudent == 0){
+		 errorLabel.setTextFill(Color.web("rgb(255,0,0)"));
+	 }
+	 else{
+		 errorLabel.setTextFill(Color.web("rgb(255,255,255)"));
+		 //New scene =menu
+	 }
+	
+	 
 	 
 	 
  }
