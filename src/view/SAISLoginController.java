@@ -1,6 +1,8 @@
 package view;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -55,31 +57,34 @@ private BorderPane rootLayout;
  }
  
  @FXML
- private void handleConfirm() throws StudentException, SLoginException{
+ private int handleConfirm(ActionEvent event) throws StudentException, SLoginException, Exception{
 	 int userName = Integer.valueOf(userNameField.getText());
 	 int password = Integer.valueOf(passwordField.getText());
 	 
 	 StudentLogin slong = new StudentLogin(userName, password, 0);
 	 int curStudent;
 	 
-	 curStudent = SAIS.studentLogin(slong);
+	 curStudent = (int)SAIS.studentLogin(slong);
 	 
 	 if(curStudent == 0){
 		 errorLabel.setTextFill(Color.web("rgb(255,0,0)"));
+		 return 0;
 	 }
 	 else{
 		 errorLabel.setTextFill(Color.web("rgb(255,255,255)"));
 		 //New scene =menu
+		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
+		 Scene curScene = new Scene(curParent);
+		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 
 		 
+		 curStage.setScene(curScene);
+		 curStage.show();
+		 
+		 SAISMenuController.intialize(curStudent);
+		 return curStudent;
 	 }
 	
 	 	 
  }
-
-private void (String string) {
-	// TODO Auto-generated method stub
-	
-}
-
 }

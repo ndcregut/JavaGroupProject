@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SAISLoginController">
+<AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SAISLoginController">
    <children>
       <TextField fx:id="userNameField" layoutX="109.0" layoutY="88.0" />
       <TextField fx:id="passwordField" layoutX="109.0" layoutY="125.0" />
@@ -20,6 +20,6 @@
       <Label fx:id="userNameLabel" layoutX="43.0" layoutY="92.0" text="Username" />
       <Label fx:id="passwordLabel" layoutX="43.0" layoutY="129.0" text="Password" />
       <Label layoutX="136.0" layoutY="56.0" />
-      <Label fx:id="errorLabel" layoutX="136.0" layoutY="56.0" text="Incorrect login!" textFill="WHITE" />
+      <Label fx:id="errorLabel" layoutX="136.0" layoutY="56.0" style="-fx-background-color: white;" text="Incorrect login!" textFill="WHITE" />
    </children>
 </AnchorPane>

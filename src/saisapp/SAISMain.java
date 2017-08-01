@@ -51,6 +51,10 @@ public class SAISMain extends Application {
 			loader.setLocation(SAISMain.class.getResource("/view/SAIS_login.fxml"));
 			AnchorPane saisLayout = (AnchorPane) loader.load();		//may have to change this line
 			
+			/*Scene scene = new Scene(saisLayout);
+			primaryStage.setScene(scene);
+			primaryStage.show();*/
+			
 			//Set SAIS_login into center of Root_layout
 			rootLayout.setCenter(saisLayout);
 			

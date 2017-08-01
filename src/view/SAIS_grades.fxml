@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SAISGradesController">
    <children>
       <GridPane gridLinesVisible="true" layoutX="99.0" layoutY="140.0" prefHeight="120.0" prefWidth="450.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="125.0">
         <columnConstraints>
@@ -147,7 +147,7 @@
             </Label>
          </children>
       </GridPane>
-      <Button layoutX="158.0" layoutY="284.0" mnemonicParsing="false" text="Back to Menu" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="158.0" />
+      <Button layoutX="158.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleReturnToMenu" text="Back to Menu" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="158.0" />
       <Button layoutX="374.0" layoutY="284.0" mnemonicParsing="false" text="Exit SAIS" AnchorPane.bottomAnchor="91.0" />
       <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="-1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <image>
