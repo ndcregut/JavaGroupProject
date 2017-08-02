@@ -18,9 +18,9 @@ public class SAIS{
 		String sFName;
 		String sLName;
 		char sRegStatus;
-		
-		java.io.File file = new java.io.File("saisapp/Student.txt");
-				
+
+		java.io.File file = new java.io.File("Student.txt");
+		System.out.println(file.getAbsolutePath());		
 		
 		try{
 			Scanner input = new Scanner(file);
@@ -62,7 +62,7 @@ public class SAIS{
 		return 0;
 	}
 	
-	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
+/*	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
 		String fName;
 		String lName;
 		int studentID;
@@ -73,7 +73,8 @@ public class SAIS{
 		Scanner input = null;
 		try
 		{
-			input = new Scanner(new File("Student.txt"));
+			String fileName= "Student.txt";
+			input = new Scanner(new File(fileName));
 		}
 		catch(FileNotFoundException s)
 		{
@@ -91,5 +92,5 @@ public class SAIS{
 		}
 	}
 	
-
+*/
 }
