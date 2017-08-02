@@ -1,4 +1,4 @@
-package view;
+package saisapp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,18 +15,17 @@ import saisapp.SAIS;
 import saisapp.StudentException;
 
 
-public class SAISScheduleController {
+public class SAISGradesController {
 
 private static int studentID;
 
 
 	 private SAISMain saisMain;		//may need to change this line 
 	 
-	 public SAISScheduleController(){
+	 public SAISGradesController(){
 		 
 	 }
 	 
-	 @FXML
 	  
 	 public void setSAISMain(SAISMain saisMain){
 		 this.saisMain = saisMain;
@@ -36,9 +35,10 @@ private static int studentID;
 		 studentID=newID;
 	 }
 	 
+	 
 	 @FXML
 	 private void handleReturnToMenu(ActionEvent event)throws Exception{
-		  Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
+		  Parent curParent =  FXMLLoader.load(getClass().getResource("SAIS_menu.fxml"));
 			 Scene curScene = new Scene(curParent);
 			 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			 
@@ -48,7 +48,6 @@ private static int studentID;
 			 
 			 SAISMenuController.intialize(studentID);
 	  }
-	 
 	 @FXML
 	 private void handleExit(){
 		 

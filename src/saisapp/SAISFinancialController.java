@@ -1,4 +1,4 @@
-package view;
+package saisapp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,7 +37,7 @@ private static int studentID;
 	 
 	 @FXML
 	 private void handleReturnToMenu(ActionEvent event)throws Exception{
-		  Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
+		  Parent curParent =  FXMLLoader.load(getClass().getResource("SAIS_menu.fxml"));
 			 Scene curScene = new Scene(curParent);
 			 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			 

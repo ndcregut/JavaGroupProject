@@ -1,4 +1,4 @@
-package view;
+package saisapp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,10 +51,10 @@ private BorderPane rootLayout;
 	 passwordField.setPromptText("Enter your password");
 	 
  }
- 
+/* 
  public void setSAISMain(SAISMain saisMain){
 	 this.saisMain = saisMain;
- }
+ }*/
  
  @FXML
  private int handleConfirm(ActionEvent event) throws StudentException, SLoginException, Exception{
@@ -73,7 +73,7 @@ private BorderPane rootLayout;
 	 else{
 		 errorLabel.setTextFill(Color.web("rgb(255,255,255)"));
 		 //New scene =menu
-		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
+		 Parent curParent =  FXMLLoader.load(getClass().getResource("SAIS_menu.fxml"));
 		 Scene curScene = new Scene(curParent);
 		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 

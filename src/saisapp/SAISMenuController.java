@@ -1,4 +1,4 @@
-package view;
+package saisapp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,7 +37,7 @@ private static int studentID;
 	 
 	 @FXML
 	 private void handleGrades(ActionEvent event)throws Exception{		 
-		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_grades.fxml"));
+		 Parent curParent =  FXMLLoader.load(getClass().getResource("SAIS_grades.fxml"));
 		 Scene curScene = new Scene(curParent);
 		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 
@@ -49,7 +49,7 @@ private static int studentID;
 	 }
 	 @FXML
 	 private void handleSchedule(ActionEvent event)throws Exception{
-		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_schedule.fxml"));
+		 Parent curParent =  FXMLLoader.load(getClass().getResource("SAIS_schedule.fxml"));
 		 Scene curScene = new Scene(curParent);
 		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 
@@ -62,7 +62,7 @@ private static int studentID;
 	 }
 	 @FXML
 	 private void handleFinancial(ActionEvent event)throws Exception{
-		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_financial.fxml"));
+		 Parent curParent =  FXMLLoader.load(getClass().getResource("SAIS_financial.fxml"));
 		 Scene curScene = new Scene(curParent);
 		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 
