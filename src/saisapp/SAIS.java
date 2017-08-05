@@ -7,6 +7,12 @@ import saisapp.StudentLogin;
 
 public class SAIS{
 	
+	private static int glbsID;
+	
+	public int getGlobalID(){
+		return glbsID;
+	}
+	
 	public static int studentLogin(StudentLogin newSLong) throws StudentException{
 		int sid = newSLong.getStudentID();
 		int dob = newSLong.getDOB();
@@ -20,7 +26,6 @@ public class SAIS{
 		char sRegStatus;
 
 		java.io.File file = new java.io.File("Student.txt");
-		System.out.println(file.getAbsolutePath());		
 		
 		try{
 			Scanner input = new Scanner(file);
@@ -54,15 +59,184 @@ public class SAIS{
 			if(sid == ssid && dob == sdob){				
 	
 				int curStudent= ssid;
-	
+				glbsID=ssid;
 				return curStudent;
 			}
 		}
 	
 		return 0;
 	}
+
+	public static ArrayList showFinancialStatus()throws FinancialException{
+		
+		ArrayList<FinancialStatus> list = new ArrayList<FinancialStatus>();
+		
+		int ssid;
+		float sAmount;
+		String sStatus;
+		
+		
+		java.io.File file = new java.io.File("FStatus.txt");
+		
+		try{
+			Scanner input = new Scanner(file);
+			
+			while(input.hasNext()){
+					ssid = input.nextInt();
+					sAmount=input.nextFloat();
+					sStatus=input.next();
+				try{
+					list.add(new FinancialStatus(ssid, sAmount,sStatus));
+				}
+				catch(FinancialException ex){
+					System.out.println(ex);
+				}
+			}
+		}
+		catch(Exception ex){
+			System.out.println(ex);
+		}
+		
+		ArrayList<FinancialStatus> curStatus = new ArrayList<FinancialStatus>();
+		
+		for(int i = 0; i < list.size(); i++){
+			ssid = list.get(i).getStudentID();
+			
+			if(glbsID == ssid){				
+				sAmount = list.get(i).getAccountBalance();
+				sStatus = list.get(i).getFinancialStatus();
+				try{
+					curStatus.add(new FinancialStatus(ssid, sAmount,sStatus));
+				}
+				catch(FinancialException ex){
+					System.out.println(ex);
+				}
+			}
+		}
 	
-/*	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
+		return curStatus;
+	}
+
+	
+	public static ArrayList viewCurrentSchedule()throws ScheduleException{
+		
+		ArrayList<Schedule> list = new ArrayList<Schedule>();
+		
+		int ssid;
+		String sSemester;
+		int sYear;
+		String sClassID;
+		String sClassName;
+		String sDays;
+		String sTimes;
+		String sBuilding;
+		String sRoom;
+		
+		java.io.File file = new java.io.File("Schedule.txt");
+		
+		try{
+			Scanner input = new Scanner(file);
+			
+			while(input.hasNext()){
+					ssid = input.nextInt();
+					sSemester = input.next();
+					sYear = input.nextInt();
+					sClassID = input.next();
+					sClassName = input.next();
+					sDays = input.next();
+					sTimes = input.next();
+					sBuilding = input.next();
+					sRoom = input.next();
+				try{
+					list.add(new Schedule(ssid, sSemester, sYear, sClassID, sClassName, sDays, sTimes, sBuilding, sRoom));
+				}
+				catch(ScheduleException ex){
+					System.out.println(ex);
+				}
+			}
+		}
+		catch(Exception ex){
+			System.out.println(ex);
+		}
+		
+		ArrayList<Schedule> curSchedule = new ArrayList<Schedule>();
+		
+		for(int i = 0; i < list.size(); i++){
+			ssid = list.get(i).getStudentID();
+			
+			if(glbsID == ssid){				
+				sSemester = list.get(i).getSemester();
+				sYear = list.get(i).getYear();
+				sClassID = list.get(i).getClassID();
+				sClassName = list.get(i).getClassName();
+				sDays = list.get(i).getDays();
+				sTimes = list.get(i).getTimes();
+				sBuilding = list.get(i).getBuilding();
+				sRoom = list.get(i).getRoom();
+				try{
+					curSchedule.add(new Schedule(ssid, sSemester, sYear, sClassID, sClassName, sDays, sTimes, sBuilding, sRoom));
+				}
+				catch(ScheduleException ex){
+					System.out.println(ex);
+				}
+			}
+		}		
+		return curSchedule;
+	}
+
+	public static ArrayList viewCurrentGrades()throws GradeException{
+		
+		ArrayList<Grade> list = new ArrayList<Grade>();
+		
+		char sGrade;
+		String sClassID;
+		String sClassName;
+		int ssid;
+				
+		java.io.File file = new java.io.File("Grades.txt");
+		
+		try{
+			Scanner input = new Scanner(file);
+			
+			while(input.hasNext()){
+					sGrade=input.next().charAt(0);	
+					sClassID = input.next();
+					sClassName = input.next();
+					ssid = input.nextInt();
+					
+				try{
+					list.add(new Grade(ssid,sClassID, sClassName,sGrade));
+				}
+				catch(GradeException ex){
+					System.out.println(ex);
+				}
+			}
+		}
+		catch(Exception ex){
+			System.out.println(ex);
+		}
+		
+		ArrayList<Grade> curGrade = new ArrayList<Grade>();
+		
+		for(int i = 0; i < list.size(); i++){
+			ssid = list.get(i).getStudentID();
+			
+			if(glbsID == ssid){				
+				sClassID = list.get(i).getClassID();
+				sClassName = list.get(i).getClassName();
+				sGrade = list.get(i).getGrade();
+				try{
+					curGrade.add(new Grade(ssid, sClassID, sClassName,sGrade));
+				}
+				catch(GradeException ex){
+					System.out.println(ex);
+				}
+			}
+		}		
+		return curGrade;
+	}
+	
+	/*	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
 		String fName;
 		String lName;
 		int studentID;

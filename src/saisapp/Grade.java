@@ -11,11 +11,11 @@ public class Grade {
 		//default constructor
 	}
 
-	public Grade(char grade, String classID, String className, int studentID)throws GradeException{
-		setGrade(grade);
+	public Grade(int studentID,  String classID, String className, char grade)throws GradeException{
+		setStudentID(studentID);
 		setClassID(classID);
 		setClassName(className);
-		setStudentID(studentID);
+		setGrade(grade);
 	}
 
 	public void setGrade(char newGrade)throws GradeException{

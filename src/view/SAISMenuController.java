@@ -13,11 +13,11 @@ import saisapp.StudentLogin;
 import saisapp.Student;
 import saisapp.SAIS;
 import saisapp.StudentException;
+import view.SAISScheduleController;
+import java.util.ArrayList;
 
 
 public class SAISMenuController {
-
-private static int studentID;
 
 
 	 private SAISMain saisMain;		//may need to change this line 
@@ -30,8 +30,8 @@ private static int studentID;
 		 this.saisMain = saisMain;
 	 }
 	 
-	 public static void intialize(int newID){
-		 studentID=newID;
+	 public static void intialize(){
+		 //studentID=newID;
 	 }
 	 
 	 
@@ -45,7 +45,7 @@ private static int studentID;
 		 curStage.setScene(curScene);
 		 curStage.show();
 		 
-		 SAISGradesController.intialize(studentID);
+		 
 	 }
 	 @FXML
 	 private void handleSchedule(ActionEvent event)throws Exception{
@@ -53,11 +53,11 @@ private static int studentID;
 		 Scene curScene = new Scene(curParent);
 		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 
-		 
 		 curStage.setScene(curScene);
+		 
 		 curStage.show();
 		 
-		 SAISScheduleController.intialize(studentID);
+		 
 		 
 	 }
 	 @FXML
@@ -68,9 +68,10 @@ private static int studentID;
 		 
 		 
 		 curStage.setScene(curScene);
+		 
 		 curStage.show();
 		 
-		 SAISFinancialController.intialize(studentID);
+	
 	}
 	@FXML 
 	private void handleExit(){

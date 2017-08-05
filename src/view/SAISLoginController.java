@@ -76,13 +76,13 @@ private BorderPane rootLayout;
 		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
 		 Scene curScene = new Scene(curParent);
 		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		 
-		 
+
 		 curStage.setScene(curScene);
 		 curStage.show();
 		 
-		 SAISMenuController.intialize(curStudent);
-		 return curStudent;
+		 SAISMenuController.intialize();
+		 
+		 return userName;
 	 }
 	
 	 	 

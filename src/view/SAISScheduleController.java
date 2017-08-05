@@ -1,5 +1,6 @@
 package view;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,35 +8,63 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+//import javafx.scene.layout.GridPane;
+import javafx.scene.layout.AnchorPane;
+//import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import saisapp.SAISMain;
-import saisapp.StudentLogin;
+import saisapp.Schedule;
 import saisapp.Student;
+import saisapp.StudentLogin;
 import saisapp.SAIS;
-import saisapp.StudentException;
+import saisapp.ScheduleException;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class SAISScheduleController {
 
-private static int studentID;
+@FXML
+private AnchorPane anchorPane;
+@FXML
+private TextField studentIDField;
 
-
-	 private SAISMain saisMain;		//may need to change this line 
+	 //private SAISMain saisMain;		//may need to change this line 
 	 
 	 public SAISScheduleController(){
-		 
+		 //default constructor
 	 }
 	 
-	 @FXML
+	 
+	@FXML
 	  
-	 public void setSAISMain(SAISMain saisMain){
+	/* public void setSAISMain(SAISMain saisMain){
 		 this.saisMain = saisMain;
+	 }*/
+	 
+	 public void initialize(){		 
+		 
+		ArrayList <Schedule> curSchedule = new ArrayList<Schedule>();
+		 
+		 try{
+		 curSchedule = SAIS.viewCurrentSchedule();
+		 }
+		 catch(ScheduleException e){
+			 System.out.println(e);
+		 }
+		 //studentIDField.setText(curSchedule.get(0).getStudentID());
+		 System.out.println(curSchedule.get(0).getClassName());
+		  
+
 	 }
 	 
-	 public static void intialize(int newID){
-		 studentID=newID;
-	 }
-	 
+	
+	
 	 @FXML
 	 private void handleReturnToMenu(ActionEvent event)throws Exception{
 		  Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
@@ -45,8 +74,7 @@ private static int studentID;
 			 
 			 curStage.setScene(curScene);
 			 curStage.show();
-			 
-			 SAISMenuController.intialize(studentID);
+	
 	  }
 	 
 	 @FXML

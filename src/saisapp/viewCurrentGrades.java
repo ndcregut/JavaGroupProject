@@ -2,7 +2,7 @@ package saisapp;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
 public class viewCurrentGrades{
 
 	public static void readGrades(StudentLogin studentLogin)throws Exception{
@@ -77,4 +77,4 @@ public class viewCurrentGrades{
 		else
 			studentLogin.setLoggedIn(2);
 	}
-}
+}*/

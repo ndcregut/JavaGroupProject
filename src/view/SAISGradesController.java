@@ -1,5 +1,7 @@
 package view;
 
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,13 +13,13 @@ import javafx.stage.Stage;
 import saisapp.SAISMain;
 import saisapp.StudentLogin;
 import saisapp.Student;
+import saisapp.Grade;
+import saisapp.GradeException;
 import saisapp.SAIS;
 import saisapp.StudentException;
 
 
 public class SAISGradesController {
-
-private static int studentID;
 
 
 	 private SAISMain saisMain;		//may need to change this line 
@@ -31,8 +33,18 @@ private static int studentID;
 		 this.saisMain = saisMain;
 	 }
 	 
-	 public static void intialize(int newID){
-		 studentID=newID;
+	 public static void initialize(){
+		 ArrayList <Grade> curGrades = new ArrayList<Grade>();
+		 
+		 try{
+		 curGrades = SAIS.viewCurrentGrades();
+		 }
+		 catch(GradeException e){
+			 System.out.println(e);
+		 }
+		 //studentIDField.setText(curGrades.get(0).getStudentID());
+		 System.out.println(curGrades.get(0).getClassID());
+		 
 	 }
 	 
 	 
@@ -46,7 +58,6 @@ private static int studentID;
 			 curStage.setScene(curScene);
 			 curStage.show();
 			 
-			 SAISMenuController.intialize(studentID);
 	  }
 	 @FXML
 	 private void handleExit(){
