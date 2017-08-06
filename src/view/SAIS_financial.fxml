@@ -54,7 +54,7 @@
       <Button layoutX="265.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleExit" text="Exit SAIS" />
             <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="-1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <image>
-            <Image url="@../../resources/Logo%5B96%5D.jpg" />
+            <Image url="@Logo.jpg" />
          </image>
       </ImageView>
       <Label fx:id="StudentIDLabel" layoutX="151.0" layoutY="118.0" text="Label" />

@@ -14,7 +14,7 @@
       <Button layoutX="215.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleConfirm" text="Confirm" />
       <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="9.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="10.0">
          <image>
-            <Image url="@../../resources/Logo%5B96%5D.jpg" />
+            <Image url="@Logo.jpg" />
          </image>
       </ImageView>
       <Label fx:id="userNameLabel" layoutX="43.0" layoutY="92.0" text="Username" />
