@@ -1,5 +1,0 @@
-1 2000 Amount_Due
-2 -1000 Refund_Due
-3 0 Account_Paid
-4 150 Amount_Due
-5 0 Account_Paid
