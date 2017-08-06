@@ -2,6 +2,7 @@ package view;
 
 import java.util.ArrayList;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -114,8 +115,9 @@ public class SAISGradesController {
 			 
 	  }
 	 @FXML
-	 private void handleExit(){
-		 
+	 private void handleExit(ActionEvent event){
+		 Platform.exit();
+		 System.exit(0);
 	 }
 
 }

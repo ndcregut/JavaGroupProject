@@ -1,6 +1,7 @@
 package view;
 
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -151,7 +152,8 @@ private Label room4;
 	 
 	 @FXML
 	 private void handleExit(){
-		 
+		 Platform.exit();
+		 System.exit(0);
 	 }
 
 }

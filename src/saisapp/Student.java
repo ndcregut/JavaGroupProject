@@ -12,7 +12,7 @@ public class Student {
 		//default constructor
 	}
 
-
+	//Constructor
 	public Student(String fName, String lName, int studentID, int DOB, char regStatus)throws StudentException {
 
 		setFName(fName);
@@ -22,42 +22,52 @@ public class Student {
 		setRegStatus(regStatus);
 	}
 
+	//Setter method for first name
 	public void setFName(String newfName)throws StudentException{
 		fName = newfName;
 	}
 
+	//Getter method for first name
 	public String getFName(){
 		return this.fName;
 	}
 
+	//Setter method for last name
 	public void setLName(String newlName)throws StudentException{
 		lName = newlName;
 	}
 
+	//Getter method for last name
 	public String getLName(){
 		return this.lName;
 	}
 
+	//Setter method for Student ID
 	public void setStudentID(int newStudentID)throws StudentException{
 		studentID = newStudentID;
 	}
 
+	//Getter method for Student ID
 	public int getStudentID(){
 		return this.studentID;
 	}
 
+	//Setter method for Date of Birth
 	public void setDOB(int newDOB)throws StudentException{
 		DOB = newDOB;
 	}
 
+	//Getter method for Date of Birth
 	public int getDOB(){
 		return this.DOB;
 	}
 
+	//Setter method for registration status
 	public void setRegStatus(char newregStatus)throws StudentException{
 		regStatus = newregStatus;
 	}
 
+	//Getter method for registration status
 	public char getRegStatus(){
 		return this.regStatus;
 	}

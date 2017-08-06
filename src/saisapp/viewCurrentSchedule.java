@@ -1,7 +1,7 @@
 package saisapp;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//This class was used as part of the testing environment (text based system)
 public class viewCurrentSchedule{
 
 	public static void readSchedules(StudentLogin studentLogin) throws Exception{

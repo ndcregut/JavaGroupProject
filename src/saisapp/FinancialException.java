@@ -1,4 +1,5 @@
 package saisapp;
+//Exception for Financial class
 public class FinancialException extends Exception{
 	
 	//default constructor

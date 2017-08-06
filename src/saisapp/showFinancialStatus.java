@@ -2,7 +2,7 @@ package saisapp;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-
+//This class was used as part of the testing environment (text based system) 
 public class showFinancialStatus{
 
 	public static void financialStatus(StudentLogin studentLogin) throws Exception{
