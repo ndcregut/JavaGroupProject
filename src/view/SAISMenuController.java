@@ -7,15 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import saisapp.SAISMain;
-import saisapp.StudentLogin;
-import saisapp.Student;
-import saisapp.SAIS;
-import saisapp.StudentException;
-import view.SAISScheduleController;
-import java.util.ArrayList;
 
 
 public class SAISMenuController {

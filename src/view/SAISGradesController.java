@@ -10,20 +10,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import saisapp.SAISMain;
-import saisapp.StudentLogin;
-import saisapp.Student;
 import saisapp.Grade;
 import saisapp.GradeException;
 import saisapp.SAIS;
-import saisapp.StudentException;
 
 
 public class SAISGradesController {
-	
+	//FXML Variables
 	@FXML
 	 private Label StudentIDLabel;
 	@FXML
@@ -51,22 +46,27 @@ public class SAISGradesController {
 	@FXML
 	 private Label grade4;
 
-	 private SAISMain saisMain;		//may need to change this line 
+	 private SAISMain saisMain; 
 	 
-	 public SAISGradesController(){
-		 
+	 //Default Constructor
+	 public SAISGradesController(){		 
 	 }
 	 
-	  
+	 //set saisMain reference 
 	 public void setSAISMain(SAISMain saisMain){
 		 this.saisMain = saisMain;
 	 }
 	 
+	 //Controller initialize method
 	 public void initialize(){
+		 //Variables
 		 char temp;
 		 String grade;
+		 
+		 //Set array for Student's Grade 
 		 ArrayList <Grade> curGrades = new ArrayList<Grade>();
 		 
+		 //Get Student's Grade information
 		 try{
 		 curGrades = SAIS.viewCurrentGrades();
 		 }
@@ -74,6 +74,7 @@ public class SAISGradesController {
 			 System.out.println(e);
 		 }
 		 
+		 //Set fields on form
 		 StudentIDLabel.setText(Integer.toString(curGrades.get(0).getStudentID()));
 		 class1.setText(curGrades.get(0).getClassID());
 		 name1.setText(curGrades.get(0).getClassName());
@@ -102,7 +103,7 @@ public class SAISGradesController {
 
 	 }
 	 
-	 
+	 //Event method to return to main menu
 	 @FXML
 	 private void handleReturnToMenu(ActionEvent event)throws Exception{
 		  Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_menu.fxml"));
@@ -114,6 +115,8 @@ public class SAISGradesController {
 			 curStage.show();
 			 
 	  }
+	 
+	 //Event method to exit application
 	 @FXML
 	 private void handleExit(ActionEvent event){
 		 Platform.exit();
