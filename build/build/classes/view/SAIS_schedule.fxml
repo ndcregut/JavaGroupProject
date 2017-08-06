@@ -205,7 +205,7 @@
       </Label>
       <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <image>
-            <Image url="@../../resources/Logo%5B96%5D.jpg" />
+            <Image url="@Logo.jpg" />
          </image>
       </ImageView>
       <Label layoutX="25.0" layoutY="138.0" text="Student ID" />

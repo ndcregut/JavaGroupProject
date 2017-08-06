@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SAIS.jar" size="30017" download="eager" />
+    <jar href="SAIS.jar" size="35818" download="eager" />
   </resources>
   <jfx:javafx-desc  width="0" height="0" main-class="saisapp.SAISMain"  name="SAIS" />
   <update check="background"/>
