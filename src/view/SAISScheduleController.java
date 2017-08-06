@@ -73,6 +73,10 @@ private Label room2;
 private Label room3;
 @FXML
 private Label room4;
+@FXML
+private Label semester;
+@FXML
+private Label year;
 
 	 private SAISMain saisMain; 
 	 
@@ -103,6 +107,8 @@ private Label room4;
 		 
 		 //Set form fields
 		 StudentIDLabel.setText(Integer.toString(curSchedule.get(0).getStudentID()));
+		 semester.setText(curSchedule.get(0).getSemester());
+		 year.setText(Integer.toString(curSchedule.get(0).getYear()));
 		 class1.setText(curSchedule.get(0).getClassID());
 		 name1.setText(curSchedule.get(0).getClassName());
 		 day1.setText(curSchedule.get(0).getDays());

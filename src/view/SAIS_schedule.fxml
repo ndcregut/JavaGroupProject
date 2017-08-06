@@ -193,12 +193,12 @@
             </Label>
          </children>
       </GridPane>
-      <Label layoutX="25.0" layoutY="169.0" text="Fall">
+      <Label fx:id="semester" layoutX="25.0" layoutY="169.0" text="Fall">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="112.0" layoutY="169.0" text="2017">
+      <Label fx:id="year" layoutX="112.0" layoutY="169.0" text="2017">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
