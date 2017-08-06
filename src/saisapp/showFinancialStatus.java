@@ -10,7 +10,7 @@ public class showFinancialStatus{
 
 		//Data fields for Financial Status
 		int studentID;
-		float accountBalance;
+		int accountBalance;
 		String financialStatus;
 
 		//Create new File object with FStatus.txt file
@@ -22,7 +22,7 @@ public class showFinancialStatus{
 		//loop to read contents of FStatus
 		while(input.hasNext()){
 			studentID = input.nextInt();
-			accountBalance = input.nextFloat();
+			accountBalance = input.nextInt();
 			financialStatus = input.next();
 
 			//use try-catch block to create Financial Status instance

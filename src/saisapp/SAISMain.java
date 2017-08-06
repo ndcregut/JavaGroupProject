@@ -16,17 +16,21 @@ public class SAISMain extends Application {
 
 		private Stage primaryStage;
 		private BorderPane rootLayout;
-		
+
+	//Loads primary Stage for application	
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Student Admissions Information System");
 		
+		//Sets root layout to Root_Layout.fxml file
 		initRootLayout();
 		
+		//Sets SAIS login screen
 		initSAISLogin();
 	}
 
+	//Method to set root_layout.fxml file
 	public void initRootLayout(){
 		try{
 			//Load Root layout from fxml file
@@ -49,15 +53,12 @@ public class SAISMain extends Application {
 			//Load SAIS_login Screen
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(SAISMain.class.getResource("/view/SAIS_login.fxml"));
-			AnchorPane saisLayout = (AnchorPane) loader.load();		//may have to change this line
-			
-			/*Scene scene = new Scene(saisLayout);
-			primaryStage.setScene(scene);
-			primaryStage.show();*/
+			AnchorPane saisLayout = (AnchorPane) loader.load();		
 			
 			//Set SAIS_login into center of Root_layout
 			rootLayout.setCenter(saisLayout);
 			
+			//Set controller for Login screen
 			SAISLoginController controller = loader.getController();
 			controller.setSAISMain(this);
 		}

@@ -7,26 +7,35 @@ import saisapp.StudentLogin;
 
 public class SAIS{
 	
+	//global variable for student id
 	private static int glbsID;
 	
+	//Getter method for Global student if
 	public int getGlobalID(){
 		return glbsID;
 	}
 	
+	//method for student log in
 	public static int studentLogin(StudentLogin newSLong) throws StudentException{
+		
+		//declaring variables
 		int sid = newSLong.getStudentID();
 		int dob = newSLong.getDOB();
 		
+		//Create new ArrayList of Student Objects for login
 		ArrayList<Student> list = new ArrayList<Student>();
 			
+		//Student variables
 		int ssid;
 		int sdob;
 		String sFName;
 		String sLName;
 		char sRegStatus;
 
+		//Create java File object to load Student text file
 		java.io.File file = new java.io.File("Student.txt");
 		
+		//Try loading contents of Student file
 		try{
 			Scanner input = new Scanner(file);
 			
@@ -37,6 +46,7 @@ public class SAIS{
 				sdob = input.nextInt();
 				sRegStatus=input.next().charAt(0);
 				
+				//Try creating new Student Object
 				try{
 					list.add(new Student(sFName, sLName, ssid, sdob, sRegStatus));
 				}
@@ -49,6 +59,7 @@ public class SAIS{
 			System.out.println(ex);
 		}
 		
+		//Determine if login keyed in matches one of the Student objects loaded
 		for(int i = 0; i < list.size(); i++){
 			ssid = list.get(i).getStudentID();
 			sdob = list.get(i).getDOB();
@@ -66,18 +77,22 @@ public class SAIS{
 	
 		return 0;
 	}
-
+	
+	//Method for showing student's financial status
 	public static ArrayList showFinancialStatus()throws FinancialException{
 		
+		//Create new arraylist for Financial status objects
 		ArrayList<FinancialStatus> list = new ArrayList<FinancialStatus>();
 		
+		//Financial status variables
 		int ssid;
 		int sAmount;
 		String sStatus;
 		
-		
+		//Create java File object to load FStatus text file
 		java.io.File file = new java.io.File("FStatus.txt");
 		
+		//Try loading contents of FStatus text file
 		try{
 			Scanner input = new Scanner(file);
 			
@@ -85,7 +100,9 @@ public class SAIS{
 					ssid = input.nextInt();
 					sAmount=input.nextInt();
 					sStatus=input.next();
-				try{
+					
+					//Try creating new Financial Status object
+					try{
 					list.add(new FinancialStatus(ssid, sAmount,sStatus));
 				}
 				catch(FinancialException ex){
@@ -97,8 +114,10 @@ public class SAIS{
 			System.out.println(ex);
 		}
 		
+		//Create new Arraylist to hold student's Financial status
 		ArrayList<FinancialStatus> curStatus = new ArrayList<FinancialStatus>();
 		
+		//Get student's Financial Status
 		for(int i = 0; i < list.size(); i++){
 			ssid = list.get(i).getStudentID();
 			
@@ -117,11 +136,12 @@ public class SAIS{
 		return curStatus;
 	}
 
-	
+	//Method for showing student's current schedule
 	public static ArrayList viewCurrentSchedule()throws ScheduleException{
-		
+		//Create new array list for Schedule objects
 		ArrayList<Schedule> list = new ArrayList<Schedule>();
-		
+
+		// Schedule Variables
 		int ssid;
 		String sSemester;
 		int sYear;
@@ -132,8 +152,10 @@ public class SAIS{
 		String sBuilding;
 		String sRoom;
 		
+		//Create java File object to load Schedule text file
 		java.io.File file = new java.io.File("Schedule.txt");
 		
+		//Try loading contents of Schedule text file into list 
 		try{
 			Scanner input = new Scanner(file);
 			
@@ -147,6 +169,8 @@ public class SAIS{
 					sTimes = input.next();
 					sBuilding = input.next();
 					sRoom = input.next();
+
+				//Try Creating new Schedule Object
 				try{
 					list.add(new Schedule(ssid, sSemester, sYear, sClassID, sClassName, sDays, sTimes, sBuilding, sRoom));
 				}
@@ -159,8 +183,10 @@ public class SAIS{
 			System.out.println(ex);
 		}
 		
+		//Create ArrayList to hold Student's schedule
 		ArrayList<Schedule> curSchedule = new ArrayList<Schedule>();
 		
+		//Get student's schedule
 		for(int i = 0; i < list.size(); i++){
 			ssid = list.get(i).getStudentID();
 			
@@ -184,17 +210,22 @@ public class SAIS{
 		return curSchedule;
 	}
 
+	//Method for showing current grades
 	public static ArrayList viewCurrentGrades()throws GradeException{
-		
+
+		//Create new arraylist list to hold Grade Objects
 		ArrayList<Grade> list = new ArrayList<Grade>();
 		
+		//Grade Objects
 		char sGrade;
 		String sClassID;
 		String sClassName;
 		int ssid;
 				
+		//Create java File Object to load Grade text file
 		java.io.File file = new java.io.File("Grades.txt");
 		
+		//Try loading contents of Grade file into list 
 		try{
 			Scanner input = new Scanner(file);
 			
@@ -203,7 +234,8 @@ public class SAIS{
 					sClassID = input.next();
 					sClassName = input.next();
 					ssid = input.nextInt();
-					
+			
+				//Try creating new Grade Object
 				try{
 					list.add(new Grade(ssid,sClassID, sClassName,sGrade));
 				}
@@ -216,8 +248,10 @@ public class SAIS{
 			System.out.println(ex);
 		}
 		
+		//Create new array list to hold Student's Grades
 		ArrayList<Grade> curGrade = new ArrayList<Grade>();
 		
+		//Get Student's grades
 		for(int i = 0; i < list.size(); i++){
 			ssid = list.get(i).getStudentID();
 			
@@ -235,36 +269,4 @@ public class SAIS{
 		}		
 		return curGrade;
 	}
-	
-	/*	public static void readStudentFile(ArrayList<Student> list) throws StudentException {
-		String fName;
-		String lName;
-		int studentID;
-		int DOB;
-		char regStatus;
-		String temp = "";
-		
-		Scanner input = null;
-		try
-		{
-			String fileName= "Student.txt";
-			input = new Scanner(new File(fileName));
-		}
-		catch(FileNotFoundException s)
-		{
-			System.out.println("File does Not Exist Please Try Again: ");
-		}
-
-		while (input.hasNext()) {
-			fName = input.next();
-			lName = input.next();
-			studentID = Integer.parseInt(input.next());
-			DOB = input.nextInt();
-			temp = input.next();
-			regStatus = temp.charAt(0);
-			list.add(new Student(fName, lName, studentID, DOB, regStatus));
-		}
-	}
-	
-*/
 }
