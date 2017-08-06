@@ -45,6 +45,22 @@ public class SAISGradesController {
 	 private Label grade3;
 	@FXML
 	 private Label grade4;
+	@FXML
+	private Label semester1;
+	@FXML
+	private Label semester2;
+	@FXML
+	private Label semester3;
+	@FXML
+	private Label semester4;
+	@FXML
+	private Label year1;
+	@FXML
+	private Label year2;
+	@FXML
+	private Label year3;
+	@FXML
+	private Label year4;
 
 	 private SAISMain saisMain; 
 	 
@@ -81,24 +97,32 @@ public class SAISGradesController {
 		 temp = curGrades.get(0).getGrade();
 		 grade = Character.toString(temp);
 		 grade1.setText(grade);
+		 semester1.setText(curGrades.get(0).getSemester());
+		 year1.setText(Integer.toString(curGrades.get(0).getYear()));
 
 		 class2.setText(curGrades.get(1).getClassID());
 		 name2.setText(curGrades.get(1).getClassName());
 		 temp = curGrades.get(1).getGrade();
 		 grade = Character.toString(temp);
 		 grade2.setText(grade);
+		 semester2.setText(curGrades.get(1).getSemester());
+		 year2.setText(Integer.toString(curGrades.get(1).getYear()));
 		 
 		 class3.setText(curGrades.get(2).getClassID());
 		 name3.setText(curGrades.get(2).getClassName());
 		 temp = curGrades.get(2).getGrade();
 		 grade = Character.toString(temp);
 		 grade3.setText(grade);
-
+		 semester3.setText(curGrades.get(2).getSemester());
+		 year3.setText(Integer.toString(curGrades.get(2).getYear()));
+		 
 		 class4.setText(curGrades.get(3).getClassID());
 		 name4.setText(curGrades.get(3).getClassName());
 		 temp = curGrades.get(3).getGrade();
 		 grade = Character.toString(temp);
 		 grade4.setText(grade);
+		 semester4.setText(curGrades.get(3).getSemester());
+		 year4.setText(Integer.toString(curGrades.get(3).getYear()));
 		 
 
 	 }

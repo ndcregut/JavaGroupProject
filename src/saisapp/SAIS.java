@@ -221,6 +221,8 @@ public class SAIS{
 		String sClassID;
 		String sClassName;
 		int ssid;
+		String sSemester;
+		int sYear;
 				
 		//Create java File Object to load Grade text file
 		java.io.File file = new java.io.File("Grades.txt");
@@ -234,10 +236,12 @@ public class SAIS{
 					sClassID = input.next();
 					sClassName = input.next();
 					ssid = input.nextInt();
-			
+					sSemester = input.next();
+					sYear = input.nextInt();
+					
 				//Try creating new Grade Object
 				try{
-					list.add(new Grade(ssid,sClassID, sClassName,sGrade));
+					list.add(new Grade(ssid,sClassID, sClassName,sGrade,sSemester,sYear));
 				}
 				catch(GradeException ex){
 					System.out.println(ex);
@@ -259,8 +263,10 @@ public class SAIS{
 				sClassID = list.get(i).getClassID();
 				sClassName = list.get(i).getClassName();
 				sGrade = list.get(i).getGrade();
+				sSemester= list.get(i).getSemester();
+				sYear = list.get(i).getYear();
 				try{
-					curGrade.add(new Grade(ssid, sClassID, sClassName,sGrade));
+					curGrade.add(new Grade(ssid, sClassID, sClassName,sGrade,sSemester,sYear));
 				}
 				catch(GradeException ex){
 					System.out.println(ex);

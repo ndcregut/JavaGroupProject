@@ -5,6 +5,8 @@ public class Grade {
 	private String classID;
 	private String className;
 	private int studentID;
+	private String semester;
+	private int year;
 
 
 	public Grade()throws GradeException{
@@ -12,11 +14,13 @@ public class Grade {
 	}
 
 	//Constructor
-	public Grade(int studentID,  String classID, String className, char grade)throws GradeException{
+	public Grade(int studentID,  String classID, String className, char grade, String semester, int year)throws GradeException{
 		setStudentID(studentID);
 		setClassID(classID);
 		setClassName(className);
 		setGrade(grade);
+		setSemester(semester);
+		setYear(year);
 	}
 
 	//Setter method for Grade
@@ -57,5 +61,21 @@ public class Grade {
 	//Getter method for Student ID
 	public int getStudentID(){
 		return this.studentID;
+	}
+	//Setter method for Semester
+	public void setSemester(String newSemester){
+		semester = newSemester;
+	}
+	//Getter method for semester
+	public String getSemester(){
+		return this.semester;
+	}
+	//Setter method for Year
+	public void setYear(int newYear){
+		year = newYear;
+	}
+	//Getter method for year
+	public int getYear(){
+		return this.year;
 	}
 }

@@ -15,6 +15,9 @@ public class viewCurrentGrades{
 		String classID;
 		String className;
 		int studentID;	//I think we may need to add this to the grade class
+		String semester;
+		int year;
+		
 
 		//Create new File Object for Grades.txt file
 		java.io.File file = new java.io.File("Grades.txt");
@@ -30,10 +33,12 @@ public class viewCurrentGrades{
 			classID = input.next();
 			className = input.next(); 
 			studentID = Integer.parseInt(input.next());
+			semester =input.next();
+			year = input.nextInt();
 		
 			//Use try-catch blocks to create Grade instance
 			try{
-				listOfGrades.add(new Grade(studentID, classID, className, grade));
+				listOfGrades.add(new Grade(studentID, classID, className, grade,semester, year));
 			}
 			
 			//Prints exception
@@ -53,6 +58,8 @@ public class viewCurrentGrades{
 				System.out.println("ClassID: " + currentGrade.getClassID());
 				System.out.println("ClassName: " + currentGrade.getClassName());
 				System.out.println("Grade: " + currentGrade.getGrade());
+				System.out.println("Semeseter: " + currentGrade.getSemester());
+				System.out.println("Year: " + currentGrade.getYear());
 				
 			}
 		}

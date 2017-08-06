@@ -75,30 +75,30 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+            <Label fx:id="semester4" text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+            <Label fx:id="semester3" text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+            <Label fx:id="semester2" text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+            <Label fx:id="semester1" text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="year4" text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="year3" text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label fx:id="year2" text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="year1" text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Label text="Class ID" GridPane.columnIndex="2">
                <font>
                   <Font name="System Bold" size="14.0" />
