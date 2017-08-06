@@ -33,7 +33,7 @@ public class SAIS{
 		char sRegStatus;
 
 		//Create java File object to load Student text file
-		java.io.File file = new java.io.File("Student.txt");
+		java.io.File file = new java.io.File("src/StudentsFiles/Student.txt");
 		
 		//Try loading contents of Student file
 		try{
@@ -90,7 +90,7 @@ public class SAIS{
 		String sStatus;
 		
 		//Create java File object to load FStatus text file
-		java.io.File file = new java.io.File("FStatus.txt");
+		java.io.File file = new java.io.File("src/StudentsFiles/FStatus.txt");
 		
 		//Try loading contents of FStatus text file
 		try{
@@ -153,7 +153,7 @@ public class SAIS{
 		String sRoom;
 		
 		//Create java File object to load Schedule text file
-		java.io.File file = new java.io.File("Schedule.txt");
+		java.io.File file = new java.io.File("src/StudentsFiles/Schedule.txt");
 		
 		//Try loading contents of Schedule text file into list 
 		try{
@@ -225,7 +225,7 @@ public class SAIS{
 		int sYear;
 				
 		//Create java File Object to load Grade text file
-		java.io.File file = new java.io.File("Grades.txt");
+		java.io.File file = new java.io.File("src/StudentsFiles/Grades.txt");
 		
 		//Try loading contents of Grade file into list 
 		try{
