@@ -53,6 +53,6 @@
          </image>
       </ImageView>
       <Button layoutX="49.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleReturnToMenu" text="Back to Menu" />
-      <Button layoutX="265.0" layoutY="209.0" mnemonicParsing="false" text="Exit SAIS" />
+      <Button layoutX="265.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleExit" text="Exit SAIS" />
    </children>
 </AnchorPane>
