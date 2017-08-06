@@ -29,34 +29,28 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Computer Science I" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+            <Label fx:id="name1" text="Computer Science I" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin></Label>
-            <Label text="Calculus" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+            <Label fx:id="name2" text="Introduction to Speech" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin></Label>
-            <Label text="Introduction to Speech" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+            <Label fx:id="name4" text="Introduction to Computers" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin></Label>
-            <Label text="Introduction to Computers" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7">
+            <Label fx:id="grade1" text="A" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="grade2" text="B" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="grade4" text="A" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="name3" text="Composition I" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin></Label>
-            <Label text="A" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label text="A" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label text="B" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Label text="A" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
-            <Label text="Composition I" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets left="2.0" />
-               </GridPane.margin></Label>
-            <Label text="C" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label fx:id="grade3" text="C" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Label text="Class Name" GridPane.columnIndex="3" GridPane.halignment="LEFT">
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -81,16 +75,6 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="2.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="7">
-               <GridPane.margin>
-                  <Insets left="2.0" />
-               </GridPane.margin>
-            </Label>
             <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="2.0" />
@@ -106,7 +90,11 @@
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Label text="Fall" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
             <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
             <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Label text="2017" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
@@ -119,27 +107,22 @@
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="MATH 201" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Label fx:id="class4" text="CSC 100" GridPane.columnIndex="2" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="CSC 100" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Label fx:id="class3" text="ENG 100" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="ENG 100" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Label fx:id="class2" text="COMM 150" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
             </Label>
-            <Label text="COMM 150" GridPane.columnIndex="2" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets left="2.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="CSC 150" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Label fx:id="class1" text="CSC 150" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>
@@ -154,6 +137,6 @@
          </image>
       </ImageView>
       <Label layoutX="99.0" layoutY="98.0" text="Student ID" />
-      <Label fx:id="StudentIDLabel" layoutX="209.0" layoutY="98.0" prefHeight="17.0" prefWidth="131.0" text="8765" />
+      <Label fx:id="StudentIDLabel" layoutX="209.0" layoutY="98.0" prefHeight="17.0" prefWidth="131.0" />
    </children>
 </AnchorPane>

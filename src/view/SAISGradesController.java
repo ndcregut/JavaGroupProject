@@ -25,7 +25,30 @@ public class SAISGradesController {
 	
 	@FXML
 	 private Label StudentIDLabel;
-
+	@FXML
+	 private Label class1;
+	@FXML
+	 private Label class2;
+	@FXML
+	 private Label class3;
+	@FXML
+	 private Label class4;
+	@FXML
+	 private Label name1;
+	@FXML
+	 private Label name2;
+	@FXML
+	 private Label name3;
+	@FXML
+	 private Label name4;
+	@FXML
+	 private Label grade1;
+	@FXML
+	 private Label grade2;
+	@FXML
+	 private Label grade3;
+	@FXML
+	 private Label grade4;
 
 	 private SAISMain saisMain;		//may need to change this line 
 	 
@@ -39,9 +62,8 @@ public class SAISGradesController {
 	 }
 	 
 	 public void initialize(){
-		 
-		 // System.out.println("StudentID = " + Integer.toString(studentID) );
-		 
+		 char temp;
+		 String grade;
 		 ArrayList <Grade> curGrades = new ArrayList<Grade>();
 		 
 		 try{
@@ -50,10 +72,32 @@ public class SAISGradesController {
 		 catch(GradeException e){
 			 System.out.println(e);
 		 }
-		 System.out.println("StudentID = " + curGrades.get(0).getStudentID());
+		 
 		 StudentIDLabel.setText(Integer.toString(curGrades.get(0).getStudentID()));
-		 // 	studentIDField.setText(curGrades.get(0).getStudentID());
-		 // System.out.println(curGrades.get(0).getClassID());
+		 class1.setText(curGrades.get(0).getClassID());
+		 name1.setText(curGrades.get(0).getClassName());
+		 temp = curGrades.get(0).getGrade();
+		 grade = Character.toString(temp);
+		 grade1.setText(grade);
+
+		 class2.setText(curGrades.get(1).getClassID());
+		 name2.setText(curGrades.get(1).getClassName());
+		 temp = curGrades.get(1).getGrade();
+		 grade = Character.toString(temp);
+		 grade2.setText(grade);
+		 
+		 class3.setText(curGrades.get(2).getClassID());
+		 name3.setText(curGrades.get(2).getClassName());
+		 temp = curGrades.get(2).getGrade();
+		 grade = Character.toString(temp);
+		 grade3.setText(grade);
+
+		 class4.setText(curGrades.get(3).getClassID());
+		 name4.setText(curGrades.get(3).getClassName());
+		 temp = curGrades.get(3).getGrade();
+		 grade = Character.toString(temp);
+		 grade4.setText(grade);
+		 
 
 	 }
 	 
