@@ -1,4 +1,5 @@
 package saisapp;
+//Exception for Schedule class
 public class ScheduleException extends Exception{
 
 	//default constructor

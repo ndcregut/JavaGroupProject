@@ -1,4 +1,6 @@
 package saisapp;
+
+//Exceptions for Class class
 public class ClassException extends Exception{
 
 	//default constructor
@@ -6,5 +8,5 @@ public class ClassException extends Exception{
 		super("This Class is not available at this time.");
 	}
 
-	//Stub for other potenital Class Exceptions as needed
+	//Stub for other potential Class Exceptions as needed
 }

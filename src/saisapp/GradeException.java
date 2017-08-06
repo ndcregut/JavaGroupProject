@@ -1,4 +1,6 @@
 package saisapp;
+
+//Exception for Grade class
 public class GradeException extends Exception{
 	
 	//default constructor	

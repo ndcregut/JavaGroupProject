@@ -2,7 +2,7 @@ package saisapp;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-/*
+//This class was used as part of the testing environment (text based system)
 public class viewCurrentGrades{
 
 	public static void readGrades(StudentLogin studentLogin)throws Exception{
@@ -33,7 +33,7 @@ public class viewCurrentGrades{
 		
 			//Use try-catch blocks to create Grade instance
 			try{
-				listOfGrades.add(new Grade(grade, classID, className, studentID));
+				listOfGrades.add(new Grade(studentID, classID, className, grade));
 			}
 			
 			//Prints exception
@@ -77,4 +77,4 @@ public class viewCurrentGrades{
 		else
 			studentLogin.setLoggedIn(2);
 	}
-}*/
+}

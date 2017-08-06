@@ -1,4 +1,5 @@
 package saisapp;
+//Exception for Student class
 public class StudentException extends Exception{
 
 	//default constructor

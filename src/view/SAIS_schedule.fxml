@@ -237,6 +237,6 @@
       <Label layoutX="25.0" layoutY="138.0" text="Student ID" />
       <TextField layoutX="99.0" layoutY="134.0" text="8546" />
       <Button layoutX="161.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleReturnToMenu" text="Back to Menu" AnchorPane.bottomAnchor="36.0" />
-      <Button layoutX="377.0" layoutY="339.0" mnemonicParsing="false" text="Exit SAIS" AnchorPane.bottomAnchor="36.0" />
+      <Button layoutX="377.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleExit" text="Exit SAIS" AnchorPane.bottomAnchor="36.0" />
    </children>
 </AnchorPane>
