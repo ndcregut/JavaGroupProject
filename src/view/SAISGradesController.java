@@ -8,7 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import saisapp.SAISMain;
 import saisapp.StudentLogin;
@@ -20,6 +22,9 @@ import saisapp.StudentException;
 
 
 public class SAISGradesController {
+	
+	@FXML
+	 private Label StudentIDLabel;
 
 
 	 private SAISMain saisMain;		//may need to change this line 
@@ -33,7 +38,10 @@ public class SAISGradesController {
 		 this.saisMain = saisMain;
 	 }
 	 
-	 public static void initialize(){
+	 public void initialize(){
+		 
+		 // System.out.println("StudentID = " + Integer.toString(studentID) );
+		 
 		 ArrayList <Grade> curGrades = new ArrayList<Grade>();
 		 
 		 try{
@@ -42,9 +50,11 @@ public class SAISGradesController {
 		 catch(GradeException e){
 			 System.out.println(e);
 		 }
-		 //studentIDField.setText(curGrades.get(0).getStudentID());
-		 System.out.println(curGrades.get(0).getClassID());
-		 
+		 System.out.println("StudentID = " + curGrades.get(0).getStudentID());
+		 StudentIDLabel.setText(Integer.toString(curGrades.get(0).getStudentID()));
+		 // 	studentIDField.setText(curGrades.get(0).getStudentID());
+		 // System.out.println(curGrades.get(0).getClassID());
+
 	 }
 	 
 	 

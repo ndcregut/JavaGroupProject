@@ -36,28 +36,32 @@ public class SAISMenuController {
 	 
 	 
 	 @FXML
-	 private void handleGrades(ActionEvent event)throws Exception{		 
-		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_grades.fxml"));
-		 Scene curScene = new Scene(curParent);
-		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	 private void handleGrades(ActionEvent event)throws Exception{	
+		 Stage stage;
+		 Parent root;
+		 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		 FXMLLoader loader = new FXMLLoader();
+		 loader.setLocation(getClass().getResource("/view/SAIS_grades.fxml"));
+		 root = loader.load();  // FXMLLoader.load(getClass().getResource("/view/SAIS_schedule.fxml"));
 		 
-		 
-		 curStage.setScene(curScene);
-		 curStage.show();
-		 
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 stage.show();
 		 
 	 }
 	 @FXML
 	 private void handleSchedule(ActionEvent event)throws Exception{
-		 Parent curParent =  FXMLLoader.load(getClass().getResource("/view/SAIS_schedule.fxml"));
-		 Scene curScene = new Scene(curParent);
-		 Stage curStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		 Stage stage;
+		 Parent root;
+		 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		 FXMLLoader loader = new FXMLLoader();
+		 loader.setLocation(getClass().getResource("/view/SAIS_schedule.fxml"));
+		 root = loader.load();  // FXMLLoader.load(getClass().getResource("/view/SAIS_schedule.fxml"));
 		 
-		 curStage.setScene(curScene);
-		 
-		 curStage.show();
-		 
-		 
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 stage.show();
+	
 		 
 	 }
 	 @FXML
