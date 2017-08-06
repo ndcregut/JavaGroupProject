@@ -2,14 +2,14 @@ package saisapp;
 
 public class FinancialStatus {
 	private int studentID;
-	private float accountBalance;
+	private int accountBalance;
 	private	String financialStatus;
 
 	public FinancialStatus()throws FinancialException{
 		//default constructor
 	}
 
-	public FinancialStatus(int studentID, float accountBalance, String financialStatus)throws FinancialException{
+	public FinancialStatus(int studentID, int accountBalance, String financialStatus)throws FinancialException{
 		setStudentID(studentID);
 		setAccountBalance(accountBalance);
 		setFinancialStatus(financialStatus);
@@ -24,11 +24,11 @@ public class FinancialStatus {
 		return this.studentID;
 	}
 
-	public void setAccountBalance(float newAccountBalance)throws FinancialException{	
+	public void setAccountBalance(int newAccountBalance)throws FinancialException{	
 		accountBalance = newAccountBalance;
 	}
 
-	public float getAccountBalance(){
+	public int getAccountBalance(){
 		return this.accountBalance;
 	}
 

@@ -32,20 +32,66 @@ public class SAISScheduleController {
 @FXML
 private AnchorPane anchorPane;
 @FXML
-private TextField studentIDField;
+private Label StudentIDLabel;
+@FXML
+private Label class1;
+@FXML
+private Label class2;
+@FXML
+private Label class3;
+@FXML
+private Label class4;
+@FXML
+private Label name1;
+@FXML
+private Label name2;
+@FXML
+private Label name3;
+@FXML
+private Label name4;
+@FXML
+private Label day1;
+@FXML
+private Label day2;
+@FXML
+private Label day3;
+@FXML
+private Label day4;
+@FXML
+private Label time1;
+@FXML
+private Label time2;
+@FXML
+private Label time3;
+@FXML
+private Label time4;
+@FXML
+private Label building1;
+@FXML
+private Label building2;
+@FXML
+private Label building3;
+@FXML
+private Label building4;
+@FXML
+private Label room1;
+@FXML
+private Label room2;
+@FXML
+private Label room3;
+@FXML
+private Label room4;
 
-	 //private SAISMain saisMain;		//may need to change this line 
+	 private SAISMain saisMain;		//may need to change this line 
 	 
 	 public SAISScheduleController(){
 		 //default constructor
 	 }
 	 
-	 
-	@FXML
 	  
-	/* public void setSAISMain(SAISMain saisMain){
+	 public void setSAISMain(SAISMain saisMain){
 		 this.saisMain = saisMain;
-	 }*/
+	 }
 	 
 	 public void initialize(){		 
 		 
@@ -57,9 +103,35 @@ private TextField studentIDField;
 		 catch(ScheduleException e){
 			 System.out.println(e);
 		 }
-		 //studentIDField.setText(curSchedule.get(0).getStudentID());
-		 System.out.println(curSchedule.get(0).getClassName());
 		  
+		 StudentIDLabel.setText(Integer.toString(curSchedule.get(0).getStudentID()));
+		 class1.setText(curSchedule.get(0).getClassID());
+		 name1.setText(curSchedule.get(0).getClassName());
+		 day1.setText(curSchedule.get(0).getDays());
+		 time1.setText(curSchedule.get(0).getTimes());
+		 building1.setText(curSchedule.get(0).getBuilding());
+		 room1.setText(curSchedule.get(0).getRoom());
+		 
+		 class2.setText(curSchedule.get(1).getClassID());
+		 name2.setText(curSchedule.get(1).getClassName());
+		 day2.setText(curSchedule.get(1).getDays());
+		 time2.setText(curSchedule.get(1).getTimes());
+		 building2.setText(curSchedule.get(1).getBuilding());
+		 room2.setText(curSchedule.get(1).getRoom());
+		 
+		 class3.setText(curSchedule.get(2).getClassID());
+		 name3.setText(curSchedule.get(2).getClassName());
+		 day3.setText(curSchedule.get(2).getDays());
+		 time3.setText(curSchedule.get(2).getTimes());
+		 building3.setText(curSchedule.get(2).getBuilding());
+		 room3.setText(curSchedule.get(2).getRoom());
+		 
+		 class4.setText(curSchedule.get(3).getClassID());
+		 name4.setText(curSchedule.get(3).getClassName());
+		 day4.setText(curSchedule.get(3).getDays());
+		 time4.setText(curSchedule.get(3).getTimes());
+		 building4.setText(curSchedule.get(3).getBuilding());
+		 room4.setText(curSchedule.get(3).getRoom());
 
 	 }
 	 

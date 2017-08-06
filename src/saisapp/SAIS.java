@@ -72,7 +72,7 @@ public class SAIS{
 		ArrayList<FinancialStatus> list = new ArrayList<FinancialStatus>();
 		
 		int ssid;
-		float sAmount;
+		int sAmount;
 		String sStatus;
 		
 		
@@ -83,7 +83,7 @@ public class SAIS{
 			
 			while(input.hasNext()){
 					ssid = input.nextInt();
-					sAmount=input.nextFloat();
+					sAmount=input.nextInt();
 					sStatus=input.next();
 				try{
 					list.add(new FinancialStatus(ssid, sAmount,sStatus));

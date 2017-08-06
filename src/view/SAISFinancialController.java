@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import saisapp.SAISMain;
@@ -21,6 +22,13 @@ import saisapp.StudentException;
 
 public class SAISFinancialController {
 
+	@FXML
+	 private Label StudentIDLabel;
+	@FXML
+	 private Label balance;
+	@FXML
+	 private Label status;
+	@FXML
 
 	 private SAISMain saisMain;		//may need to change this line 
 	 
@@ -33,7 +41,7 @@ public class SAISFinancialController {
 		 this.saisMain = saisMain;
 	 }
 	 
-	 public static void initialize(){
+	 public void initialize(){
 		 ArrayList <FinancialStatus> fStatus = new ArrayList<FinancialStatus>();
 		 
 		 try{
@@ -42,8 +50,10 @@ public class SAISFinancialController {
 		 catch(FinancialException e){
 			 System.out.println(e);
 		 }
-		 //studentIDField.setText(fStatus.get(0).getStudentID());
-		 System.out.println(fStatus.get(0).getAccountBalance());
+
+		 StudentIDLabel.setText(Integer.toString(fStatus.get(0).getStudentID()));
+		 balance.setText("$" + Integer.toString(fStatus.get(0).getAccountBalance()) + ".00");
+		 status.setText(fStatus.get(0).getFinancialStatus());
 		 
 	 }
 	 
