@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SAIS.jnlp">
+  <information>
+    <title>SAIS</title>
+    <vendor>com.saisapp</vendor>
+    <description>SAIS</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SAIS.jar" size="30017" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="saisapp.SAISMain"  name="SAIS" />
+  <update check="background"/>
+</jnlp>
